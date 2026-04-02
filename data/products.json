@@ -545,5 +545,29 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T11:00:07.070Z"
+  },
+  {
+    "id": "anime-tower-defense-lobby-map-r8hrqp",
+    "name": "Anime Tower Defense Lobby map",
+    "description": "Only the map(High Quality)\n",
+    "category": "Systems",
+    "fileType": ".rbxm",
+    "features": [
+      "Only a lobby map",
+      "No scripts",
+      "Just map"
+    ],
+    "robuxPrice": 550,
+    "paypalPrice": 8,
+    "mainImage": "https://i.imgur.com/65kAb4u.png",
+    "galleryImages": [
+      "https://cdn.discordapp.com/attachments/1480337992181874771/1480338081256046673/Untitled.webp?ex=69cf9c85&is=69ce4b05&hm=75e853ed7f82fbfec22712a5da99f46e04c03b6f95424af9b250f55adf5fbc6f&"
+    ],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/1koLBbW5w0PohwvtMTB6a7cHB_sm51d7R/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T11:02:16.931Z"
   }
 ]
