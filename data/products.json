@@ -569,5 +569,32 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T11:02:16.931Z"
+  },
+  {
+    "id": "clothing-store-map-outfit-game-hz5fa7",
+    "name": "Clothing Store Map Outfit Game",
+    "description": "This is a map only, meant for outfit games where u can sell UGC and clothing.\n\nPlease watch the video to see more of the map.",
+    "category": "Systems",
+    "fileType": ".rbxm",
+    "features": [
+      "PBR textures",
+      "Scripted flying birds and moving parts",
+      "Little VFX",
+      "Loads of greenery",
+      "Section for your clothing models/avatars."
+    ],
+    "robuxPrice": 2000,
+    "paypalPrice": 20,
+    "mainImage": "https://i.imgur.com/XRhV9DH.png",
+    "galleryImages": [
+      "https://youtu.be/HhvkqVb44eU"
+    ],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/1TBWGI3lsLCHktMk9EXonEr4oznYQuPx5/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "salePercent": 40,
+    "active": true,
+    "createdAt": "2026-04-02T11:08:13.561Z"
   }
 ]
