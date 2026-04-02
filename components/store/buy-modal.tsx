@@ -27,6 +27,8 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
+  const [sellerPaypalEmail, setSellerPaypalEmail] = useState<string | null>(null)
+  const [copiedEmail, setCopiedEmail] = useState(false)
 
   useEffect(() => {
     if (product) {
@@ -36,6 +38,19 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
       setCouponResult(null)
       setError(null)
       setRobuxCode(null)
+      setSellerPaypalEmail(null)
+      
+      // Fetch seller PayPal email for PayPal payments
+      if (product.paypalPrice) {
+        fetch(`/api/products/${product.id}/seller`)
+          .then(r => r.json())
+          .then(data => {
+            if (data.paypalEmail) {
+              setSellerPaypalEmail(data.paypalEmail)
+            }
+          })
+          .catch(() => {})
+      }
     }
   }, [product])
 
@@ -246,8 +261,34 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
             {/* PayPal tab: instruction */}
             {tab === "paypal" && (
               <div className="mb-4">
+                {/* Seller PayPal Email */}
+                {sellerPaypalEmail ? (
+                  <div className="mb-3 p-3 bg-[oklch(0.07_0.008_260)] border border-[#67e8f9]/30 rounded-sm">
+                    <p className="text-xs text-muted-foreground mb-1.5">Send payment to:</p>
+                    <div className="flex items-center gap-2">
+                      <span className="flex-1 font-mono text-sm text-[#67e8f9] break-all">
+                        {sellerPaypalEmail}
+                      </span>
+                      <button
+                        onClick={() => {
+                          navigator.clipboard.writeText(sellerPaypalEmail)
+                          setCopiedEmail(true)
+                          setTimeout(() => setCopiedEmail(false), 2000)
+                        }}
+                        className="p-1.5 hover:bg-[oklch(0.14_0.008_260)] rounded-sm transition-colors shrink-0"
+                      >
+                        {copiedEmail ? <Check className="w-4 h-4 text-[#67e8f9]" /> : <Copy className="w-4 h-4 text-muted-foreground" />}
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="mb-3 p-3 bg-destructive/10 border border-destructive/30 rounded-sm">
+                    <p className="text-xs text-destructive">Seller has not set up their PayPal email yet.</p>
+                  </div>
+                )}
+                
                 <p className="text-xs text-muted-foreground mb-2">
-                  Send <span className="text-[#67e8f9] font-mono">${typeof finalPaypal === "number" ? finalPaypal.toFixed(2) : "—"} USD</span> to the seller's PayPal, then paste your transaction ID below.
+                  Send <span className="text-[#67e8f9] font-mono">${typeof finalPaypal === "number" ? finalPaypal.toFixed(2) : "—"} USD</span> to the PayPal above, then paste your transaction ID below.
                 </p>
                 <input
                   type="text"

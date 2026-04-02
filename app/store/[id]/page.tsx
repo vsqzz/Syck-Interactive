@@ -7,7 +7,7 @@ import { BuyModal } from "@/components/store/buy-modal"
 import type { Product } from "@/lib/products"
 import { computeSalePrice, extractYouTubeId } from "@/lib/utils-server"
 import {
-  Check, Zap, DollarSign, ArrowLeft, Tag, User, Loader2
+  Check, Zap, DollarSign, ArrowLeft, Tag, User, Loader2, ChevronLeft, ChevronRight, Play
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -18,6 +18,7 @@ export default function ProductDetailPage() {
   const [loading, setLoading] = useState(true)
   const [showBuy, setShowBuy] = useState(false)
   const [visible, setVisible] = useState(false)
+  const [activeMediaIndex, setActiveMediaIndex] = useState(0)
 
   useEffect(() => {
     fetch(`/api/products/${id}`)
@@ -25,6 +26,7 @@ export default function ProductDetailPage() {
       .then(data => {
         if (data && !data.error) {
           setProduct(data)
+          setActiveMediaIndex(0)
           setTimeout(() => setVisible(true), 50)
         }
         setLoading(false)
@@ -57,7 +59,26 @@ export default function ProductDetailPage() {
 
   const { robuxFinal, paypalFinal, hasDiscount } = computeSalePrice(product)
   const isFree = robuxFinal === 0 && !paypalFinal
-  const youtubeId = product.mainImage ? extractYouTubeId(product.mainImage) : null
+  
+  // Build media array: mainImage first, then galleryImages
+  const allMedia: string[] = []
+  if (product.mainImage) allMedia.push(product.mainImage)
+  if (product.galleryImages) allMedia.push(...product.galleryImages)
+  
+  const activeMedia = allMedia[activeMediaIndex] ?? null
+  const activeYoutubeId = activeMedia ? extractYouTubeId(activeMedia) : null
+  
+  const nextMedia = () => {
+    if (allMedia.length > 1) {
+      setActiveMediaIndex((prev) => (prev + 1) % allMedia.length)
+    }
+  }
+  
+  const prevMedia = () => {
+    if (allMedia.length > 1) {
+      setActiveMediaIndex((prev) => (prev - 1 + allMedia.length) % allMedia.length)
+    }
+  }
 
   return (
     <div className="min-h-screen bg-[oklch(0.06_0.008_260)] noise-overlay">
@@ -79,18 +100,19 @@ export default function ProductDetailPage() {
             className="lg:col-span-3 transition-all duration-700"
             style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(20px)" }}
           >
-            <div className="aspect-video bg-[oklch(0.09_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm overflow-hidden mb-4">
-              {youtubeId ? (
+            {/* Main Media Display */}
+            <div className="relative aspect-video bg-[oklch(0.09_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm overflow-hidden mb-4 group">
+              {activeYoutubeId ? (
                 <iframe
-                  src={`https://www.youtube.com/embed/${youtubeId}`}
+                  src={`https://www.youtube.com/embed/${activeYoutubeId}`}
                   title={product.name}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"
                 />
-              ) : product.mainImage ? (
+              ) : activeMedia ? (
                 <Image
-                  src={product.mainImage}
+                  src={activeMedia}
                   alt={product.name}
                   width={800}
                   height={450}
@@ -103,7 +125,69 @@ export default function ProductDetailPage() {
                   </span>
                 </div>
               )}
+              
+              {/* Navigation arrows */}
+              {allMedia.length > 1 && (
+                <>
+                  <button
+                    onClick={prevMedia}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <ChevronLeft className="w-5 h-5 text-white" />
+                  </button>
+                  <button
+                    onClick={nextMedia}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <ChevronRight className="w-5 h-5 text-white" />
+                  </button>
+                  
+                  {/* Dots indicator */}
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                    {allMedia.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setActiveMediaIndex(idx)}
+                        className={`w-2 h-2 rounded-full transition-all ${idx === activeMediaIndex ? "bg-white" : "bg-white/40 hover:bg-white/60"}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
+            
+            {/* Thumbnail gallery */}
+            {allMedia.length > 1 && (
+              <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
+                {allMedia.map((mediaUrl, idx) => {
+                  const thumbYoutubeId = extractYouTubeId(mediaUrl)
+                  const thumbnailSrc = thumbYoutubeId 
+                    ? `https://img.youtube.com/vi/${thumbYoutubeId}/mqdefault.jpg`
+                    : mediaUrl
+                  
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveMediaIndex(idx)}
+                      className={`relative flex-shrink-0 w-24 h-14 rounded-sm overflow-hidden border-2 transition-all ${idx === activeMediaIndex ? "border-[#eca8d6]" : "border-transparent opacity-60 hover:opacity-100"}`}
+                    >
+                      <Image
+                        src={thumbnailSrc}
+                        alt={`${product.name} - ${idx + 1}`}
+                        width={96}
+                        height={54}
+                        className="w-full h-full object-cover"
+                      />
+                      {thumbYoutubeId && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                          <Play className="w-4 h-4 text-white" fill="white" />
+                        </div>
+                      )}
+                    </button>
+                  )
+                })}
+              </div>
+            )}
 
             {/* Description */}
             <div className="bg-[oklch(0.09_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm p-6 mb-4">

@@ -2,8 +2,9 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { Loader2, Plus, Minus, AlertCircle, Check } from "lucide-react"
+import { Loader2, Plus, Minus, AlertCircle, Check, X, Play, GripVertical } from "lucide-react"
 import type { Product } from "@/lib/products"
+import Image from "next/image"
 
 interface ProductFormProps {
   product?: Partial<Product>
@@ -32,11 +33,13 @@ export function ProductForm({ product, isEdit }: ProductFormProps) {
     robuxPrice: product?.robuxPrice?.toString() ?? "0",
     paypalPrice: product?.paypalPrice?.toString() ?? "",
     mainImage: product?.mainImage ?? "",
+    galleryImages: product?.galleryImages ?? [] as string[],
     downloadUrl: product?.downloadUrl ?? "",
     salePercent: product?.salePercent?.toString() ?? "",
     tags: product?.tags?.join(", ") ?? "",
     active: product?.active ?? true,
   })
+  const [newGalleryUrl, setNewGalleryUrl] = useState("")
 
   function updateFeature(index: number, value: string) {
     const updated = [...form.features]
@@ -50,6 +53,37 @@ export function ProductForm({ product, isEdit }: ProductFormProps) {
 
   function removeFeature(index: number) {
     setForm(f => ({ ...f, features: f.features.filter((_, i) => i !== index) }))
+  }
+
+  function addGalleryImage() {
+    if (!newGalleryUrl.trim()) return
+    setForm(f => ({ ...f, galleryImages: [...f.galleryImages, newGalleryUrl.trim()] }))
+    setNewGalleryUrl("")
+  }
+
+  function removeGalleryImage(index: number) {
+    setForm(f => ({ ...f, galleryImages: f.galleryImages.filter((_, i) => i !== index) }))
+  }
+
+  function moveGalleryImage(index: number, direction: "up" | "down") {
+    const newIndex = direction === "up" ? index - 1 : index + 1
+    if (newIndex < 0 || newIndex >= form.galleryImages.length) return
+    const newGallery = [...form.galleryImages]
+    const temp = newGallery[index]
+    newGallery[index] = newGallery[newIndex]
+    newGallery[newIndex] = temp
+    setForm(f => ({ ...f, galleryImages: newGallery }))
+  }
+
+  function extractYouTubeId(url: string): string | null {
+    const patterns = [
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
+    ]
+    for (const pattern of patterns) {
+      const match = url.match(pattern)
+      if (match) return match[1]
+    }
+    return null
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -66,6 +100,7 @@ export function ProductForm({ product, isEdit }: ProductFormProps) {
       robuxPrice: parseInt(form.robuxPrice) || 0,
       paypalPrice: form.paypalPrice ? parseFloat(form.paypalPrice) : undefined,
       mainImage: form.mainImage || undefined,
+      galleryImages: form.galleryImages.length > 0 ? form.galleryImages : undefined,
       downloadUrl: form.downloadUrl,
       salePercent: form.salePercent ? parseInt(form.salePercent) : undefined,
       tags: form.tags ? form.tags.split(",").map(t => t.trim()).filter(Boolean) : [],
@@ -239,6 +274,85 @@ export function ProductForm({ product, isEdit }: ProductFormProps) {
           <p className="text-xs text-muted-foreground/60 mt-1 font-mono">
             Supports image URLs or YouTube links (will display embedded video on product page)
           </p>
+        </div>
+
+        {/* Gallery Images */}
+        <div className="md:col-span-2">
+          <label className={labelClass}>Gallery Images/Videos (optional)</label>
+          <p className="text-xs text-muted-foreground/60 mb-3 font-mono">
+            Add additional images or YouTube videos to showcase your product
+          </p>
+          
+          {/* Existing gallery items */}
+          {form.galleryImages.length > 0 && (
+            <div className="space-y-2 mb-3">
+              {form.galleryImages.map((url, i) => {
+                const youtubeId = extractYouTubeId(url)
+                const thumbnailSrc = youtubeId 
+                  ? `https://img.youtube.com/vi/${youtubeId}/mqdefault.jpg`
+                  : url
+                
+                return (
+                  <div key={i} className="flex items-center gap-2 bg-[oklch(0.07_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm p-2">
+                    <div className="relative w-16 h-10 rounded-sm overflow-hidden shrink-0 bg-[oklch(0.09_0.008_260)]">
+                      <Image
+                        src={thumbnailSrc}
+                        alt={`Gallery ${i + 1}`}
+                        width={64}
+                        height={40}
+                        className="w-full h-full object-cover"
+                      />
+                      {youtubeId && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                          <Play className="w-3 h-3 text-white" fill="white" />
+                        </div>
+                      )}
+                    </div>
+                    <span className="flex-1 text-xs font-mono text-muted-foreground truncate">
+                      {url}
+                    </span>
+                    <div className="flex items-center gap-1 shrink-0">
+                      <button
+                        type="button"
+                        onClick={() => moveGalleryImage(i, "up")}
+                        disabled={i === 0}
+                        className="p-1.5 hover:bg-[oklch(0.14_0.008_260)] rounded-sm transition-colors disabled:opacity-30"
+                      >
+                        <GripVertical className="w-3.5 h-3.5 text-muted-foreground" />
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => removeGalleryImage(i)}
+                        className="p-1.5 hover:bg-destructive/20 hover:text-destructive rounded-sm transition-colors"
+                      >
+                        <X className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          )}
+          
+          {/* Add new gallery item */}
+          <div className="flex gap-2">
+            <input
+              type="url"
+              value={newGalleryUrl}
+              onChange={e => setNewGalleryUrl(e.target.value)}
+              onKeyDown={e => { if (e.key === "Enter") { e.preventDefault(); addGalleryImage() } }}
+              placeholder="Add image or YouTube URL..."
+              className={inputClass}
+            />
+            <button
+              type="button"
+              onClick={addGalleryImage}
+              disabled={!newGalleryUrl.trim()}
+              className="px-3 py-2 bg-[oklch(0.14_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm hover:bg-[oklch(0.18_0.008_260)] transition-colors disabled:opacity-50"
+            >
+              <Plus className="w-4 h-4" />
+            </button>
+          </div>
         </div>
 
         {/* Download URL */}
