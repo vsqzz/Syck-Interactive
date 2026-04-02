@@ -324,5 +324,34 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T10:37:27.382Z"
+  },
+  {
+    "id": "classic-r6-combat-system-oyudnz",
+    "name": "Classic R6 Combat System",
+    "description": "Advanced R6 Combat system for your game",
+    "category": "Systems",
+    "fileType": ".rbxl",
+    "features": [
+      "Full m1 system",
+      "Full m2 system",
+      "Block | block break | perfect block",
+      "stun system | Effective modules",
+      "Combo extender (1) [2- variants]",
+      "Animations",
+      "VFX",
+      "❌﻿﻿ SFX"
+    ],
+    "robuxPrice": 1000,
+    "paypalPrice": 10,
+    "mainImage": "https://i.imgur.com/AGF4yLQ.jpeg",
+    "galleryImages": [
+      "https://www.youtube.com/watch?v=8bu26WtRH9g"
+    ],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/1WioNBd3ww_pEIkA5Vp9PVZeOPUXDEAtv/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T10:39:35.914Z"
   }
 ]
