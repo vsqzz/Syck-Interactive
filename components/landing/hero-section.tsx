@@ -195,7 +195,7 @@ export function HeroSection() {
           </h1>
         </div>
 
-        {/* CTA buttons — big and prominent */}
+        {/* CTA buttons */}
         <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}>
@@ -209,10 +209,10 @@ export function HeroSection() {
             </svg>
           </a>
           <a
-            href="/store"
+            href="/dashboard"
             className="inline-flex items-center justify-center gap-3 px-10 py-5 border-2 border-white/40 text-white text-lg font-semibold hover:bg-white/10 hover:border-white/70 active:scale-[0.98] transition-all"
           >
-            Get Scripts
+            Start Selling
           </a>
         </div>
 
