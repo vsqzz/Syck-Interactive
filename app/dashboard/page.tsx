@@ -19,15 +19,34 @@ export default function DashboardPage() {
   useEffect(() => {
     async function load() {
       try {
-        const [productsRes, paypalRes] = await Promise.all([
+        const [productsRes, salesRes] = await Promise.all([
           fetch("/api/products"),
-          fetch("/api/seller/profile"),
+          fetch("/api/seller/sales"),
         ])
         const products = await productsRes.json()
+        const sales = await salesRes.json()
+        
         const myProducts = Array.isArray(products)
           ? products.filter((p: any) => p.creatorId === session?.user?.discordId)
           : []
-        setStats(s => ({ ...s, productCount: myProducts.length }))
+        
+        const salesArray = Array.isArray(sales) ? sales : []
+        const completedSales = salesArray.filter((s: any) => s.status === "completed")
+        
+        const robuxRevenue = completedSales
+          .filter((s: any) => s.type === "robux")
+          .reduce((sum: number, s: any) => sum + s.price, 0)
+        
+        const paypalRevenue = completedSales
+          .filter((s: any) => s.type === "paypal")
+          .reduce((sum: number, s: any) => sum + s.price, 0)
+        
+        setStats({
+          productCount: myProducts.length,
+          totalOrders: salesArray.length,
+          totalRobuxSales: robuxRevenue,
+          totalPaypalSales: paypalRevenue,
+        })
       } catch {}
       setLoading(false)
       setTimeout(() => setVisible(true), 50)

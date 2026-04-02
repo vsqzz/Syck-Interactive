@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Tag, Zap, DollarSign } from "lucide-react"
 import type { Product } from "@/lib/products"
-import { computeSalePrice } from "@/lib/utils-server"
+import { computeSalePrice, extractYouTubeId, getYouTubeThumbnail } from "@/lib/utils-server"
 
 interface ProductCardProps {
   product: Product
@@ -15,6 +15,8 @@ interface ProductCardProps {
 export function ProductCard({ product, onBuy }: ProductCardProps) {
   const { robuxFinal, paypalFinal, hasDiscount } = computeSalePrice(product)
   const isFree = robuxFinal === 0 && !paypalFinal
+  const youtubeId = product.mainImage ? extractYouTubeId(product.mainImage) : null
+  const displayImage = youtubeId ? getYouTubeThumbnail(youtubeId) : product.mainImage
 
   return (
     <div className="group hover-lift relative bg-[oklch(0.09_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm overflow-hidden transition-all duration-300 hover:border-[oklch(0.28_0.008_260)]">
@@ -26,15 +28,26 @@ export function ProductCard({ product, onBuy }: ProductCardProps) {
       )}
 
       {/* Image */}
-      <Link href={`/store/${product.id}`} className="block aspect-video overflow-hidden bg-[oklch(0.07_0.008_260)]">
-        {product.mainImage ? (
-          <Image
-            src={product.mainImage}
-            alt={product.name}
-            width={400}
-            height={225}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
+      <Link href={`/store/${product.id}`} className="block aspect-video overflow-hidden bg-[oklch(0.07_0.008_260)] relative">
+        {displayImage ? (
+          <>
+            <Image
+              src={displayImage}
+              alt={product.name}
+              width={400}
+              height={225}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            {youtubeId && (
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
+                  <svg className="w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            )}
+          </>
         ) : (
           <div className="w-full h-full flex items-center justify-center">
             <div className="text-4xl font-display text-[oklch(0.18_0.008_260)] opacity-50">
