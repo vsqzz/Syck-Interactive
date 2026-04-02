@@ -4,6 +4,7 @@ import { getSellerProfile } from "@/lib/seller-profiles"
 import { createPayPalPayment } from "@/lib/paypal"
 import { computeSalePrice } from "@/lib/utils-server"
 import { validateCoupon, useCoupon } from "@/lib/discounts"
+import { notifyNewPayPalOrder } from "@/lib/discord-webhook"
 import { NextRequest, NextResponse } from "next/server"
 
 export async function POST(req: NextRequest) {
@@ -52,6 +53,14 @@ export async function POST(req: NextRequest) {
     session.user.discordId,
     session.user.name ?? "Unknown",
     product.creatorId,
+    finalPrice,
+    transactionId
+  )
+
+  // Send Discord notification for new PayPal order
+  await notifyNewPayPalOrder(
+    product.name,
+    session.user.name ?? "Unknown",
     finalPrice,
     transactionId
   )

@@ -5,7 +5,7 @@ import { useParams } from "next/navigation"
 import { SiteNav } from "@/components/shared/site-nav"
 import { BuyModal } from "@/components/store/buy-modal"
 import type { Product } from "@/lib/products"
-import { computeSalePrice } from "@/lib/utils-server"
+import { computeSalePrice, extractYouTubeId } from "@/lib/utils-server"
 import {
   Check, Zap, DollarSign, ArrowLeft, Tag, User, Loader2
 } from "lucide-react"
@@ -57,6 +57,7 @@ export default function ProductDetailPage() {
 
   const { robuxFinal, paypalFinal, hasDiscount } = computeSalePrice(product)
   const isFree = robuxFinal === 0 && !paypalFinal
+  const youtubeId = product.mainImage ? extractYouTubeId(product.mainImage) : null
 
   return (
     <div className="min-h-screen bg-[oklch(0.06_0.008_260)] noise-overlay">
@@ -79,7 +80,15 @@ export default function ProductDetailPage() {
             style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(20px)" }}
           >
             <div className="aspect-video bg-[oklch(0.09_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm overflow-hidden mb-4">
-              {product.mainImage ? (
+              {youtubeId ? (
+                <iframe
+                  src={`https://www.youtube.com/embed/${youtubeId}`}
+                  title={product.name}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              ) : product.mainImage ? (
                 <Image
                   src={product.mainImage}
                   alt={product.name}

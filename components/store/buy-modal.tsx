@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useSession, signIn } from "next-auth/react"
-import { X, Zap, DollarSign, Tag, Copy, Check, Loader2, AlertCircle } from "lucide-react"
+import { X, Zap, DollarSign, Tag, Copy, Check, Loader2, AlertCircle, ExternalLink } from "lucide-react"
 import type { Product } from "@/lib/products"
 import { computeSalePrice } from "@/lib/utils-server"
 
@@ -175,6 +175,18 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
                 Code expires in 30 minutes. After payment, visit My Purchases.
               </p>
             </div>
+            
+            {/* Payment Hub Button */}
+            <a
+              href="https://www.roblox.com/games/91093048274812/Payment-Hub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full mb-3 py-2.5 bg-[#fbbf24]/20 border border-[#fbbf24]/40 text-[#fbbf24] font-mono text-sm font-bold rounded-sm hover:bg-[#fbbf24]/30 transition-colors flex items-center justify-center gap-2"
+            >
+              <ExternalLink className="w-4 h-4" />
+              Open Payment Hub in Roblox
+            </a>
+            
             <button onClick={onClose} className="w-full py-2 bg-[oklch(0.14_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm text-sm font-mono hover:bg-[oklch(0.18_0.008_260)] transition-colors">
               Got it
             </button>

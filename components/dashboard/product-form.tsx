@@ -228,14 +228,17 @@ export function ProductForm({ product, isEdit }: ProductFormProps) {
 
         {/* Main Image URL */}
         <div className="md:col-span-2">
-          <label className={labelClass}>Main Image URL (optional)</label>
+          <label className={labelClass}>Main Image or YouTube URL (optional)</label>
           <input
             type="url"
             value={form.mainImage}
             onChange={e => setForm(f => ({ ...f, mainImage: e.target.value }))}
-            placeholder="https://..."
+            placeholder="https://... or https://youtube.com/watch?v=..."
             className={inputClass}
           />
+          <p className="text-xs text-muted-foreground/60 mt-1 font-mono">
+            Supports image URLs or YouTube links (will display embedded video on product page)
+          </p>
         </div>
 
         {/* Download URL */}
