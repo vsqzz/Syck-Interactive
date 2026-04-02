@@ -396,5 +396,25 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T10:46:38.552Z"
+  },
+  {
+    "id": "3-dragon-heads-vfx-models-ivb4ow",
+    "name": "3 Dragon Heads + VFX Models",
+    "description": "These are Just Models and VFX NO Scripts. Only allowed to be used in community games, NOT allowed to resell or distribute anywhere else. Legal actions will be taken for all paid products we have!\n",
+    "category": "Systems",
+    "fileType": ".rbxm",
+    "features": [],
+    "robuxPrice": 150,
+    "paypalPrice": 2,
+    "mainImage": "https://i.imgur.com/JsF6NIh.png",
+    "galleryImages": [
+      "https://youtu.be/Vw_0rZY6lA8"
+    ],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/1mK2Nf5BRVyHmf0RALaQqqvE7VIRjJImq/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T10:47:45.339Z"
   }
 ]
