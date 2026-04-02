@@ -486,7 +486,7 @@
     "id": "anounce-command-em751a",
     "name": "ANOUNCE COMMAND",
     "description": "Type !AA [message] in chat to use\n",
-    "category": "Systems",
+    "category": "Free",
     "fileType": ".rbxm",
     "features": [],
     "robuxPrice": 0,
