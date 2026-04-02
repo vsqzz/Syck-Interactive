@@ -89,5 +89,37 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T10:04:05.078Z"
+  },
+  {
+    "id": "r6-movement-system-mqwlyu",
+    "name": "R6 Movement System",
+    "description": "Clean smooth movement system",
+    "category": "Systems",
+    "fileType": ".rbxm",
+    "features": [
+      "Amazing Animations",
+      "Easily customizable",
+      "Footsteps Sounds",
+      "Dashing",
+      "Sliding",
+      "Crouching"
+    ],
+    "robuxPrice": 350,
+    "paypalPrice": 7.99,
+    "mainImage": "https://i.imgur.com/MKVG2Du.png",
+    "galleryImages": [
+      "https://youtu.be/oPaYSWidQCs"
+    ],
+    "tags": [
+      "system",
+      "movement",
+      "r6",
+      "animation"
+    ],
+    "downloadUrl": "https://drive.google.com/file/d/1MTcVduj2L-ig3-EYSbTbO_2GG4Cb78RC/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T10:17:30.545Z"
   }
 ]
