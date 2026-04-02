@@ -11,9 +11,9 @@ interface ProductFormProps {
 }
 
 const CATEGORIES = [
-  "Admin Systems", "Combat Systems", "UI Frameworks", "Minigames",
-  "Tools & Utilities", "Animation Packs", "Vehicle Systems", "Economy Systems",
-  "Social Systems", "Other",
+  "All",
+  "Systems", "Free", "UI", "Models",
+  "Websites", "Boats", "Vehicles",
 ]
 
 const FILE_TYPES = [".rbxm", ".rbxmx", ".lua", ".rbxl", ".rbxlx", ".zip", ".model", "other"]
