@@ -26,9 +26,7 @@
 -- ============================================
 
 local CONFIG = {
-	-- Your Vercel site URL (no trailing slash)
-	-- Example: "https://syck-interactive.vercel.app/api/robux"
-	API_BASE_URL = "https://YOUR-VERCEL-DOMAIN.vercel.app/api/robux",
+	API_BASE_URL = "https://www.syckinteractive.space/api/robux",
 
 	-- Webhook secret — must match ROBUX_WEBHOOK_SECRET in your Vercel env vars
 	WEBHOOK_SECRET = "Zm9ybWVyYnJpZWZub2lzZWJhbGxvb25taXh0dXJlc3RyYXd3ZXN0ZXJub25ldHJ1dGg=",
