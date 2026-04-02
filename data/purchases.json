@@ -192,8 +192,9 @@
     "buyerDiscordId": "850096584331100161",
     "buyerUsername": "TrippySkizze",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-02T18:24:19.983Z",
-    "createdAt": "2026-04-02T17:54:19.984Z"
+    "createdAt": "2026-04-02T17:54:19.984Z",
+    "completedAt": "2026-04-02T17:56:26.918Z"
   }
 ]
