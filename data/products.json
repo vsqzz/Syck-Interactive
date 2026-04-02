@@ -416,5 +416,29 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T10:47:45.339Z"
+  },
+  {
+    "id": "clean-sleek-and-minimal-portfolio-db5uhv",
+    "name": "Clean Sleek and Minimal Portfolio",
+    "description": "Minimal, modern black and white style website made for any kind of portfolio\n\nCheck out here - https://nexushost.app/\nClean and easy to add your own work to.\n\nWill receive the .zip file ( Will NOT be hosted for you, if you'd like for it to be hosted you will have to pay extra depending on your choice of domain.)\n",
+    "category": "Websites",
+    "fileType": ".zip",
+    "features": [
+      "Will be put off sale after first purchase!"
+    ],
+    "robuxPrice": 8000,
+    "paypalPrice": 50,
+    "mainImage": "https://i.imgur.com/Zj6mU8v.png",
+    "galleryImages": [
+      "https://media.discordapp.net/attachments/1480334465484980325/1480334500683714620/Untitled-1.webp?ex=69cef070&is=69cd9ef0&hm=ae0127423a40a73c2d929f84e4b77b432804029b1b9379d321b29d8885f8839c&=&format=webp",
+      "https://cdn.discordapp.com/attachments/1480334465484980325/1480334520501665803/Untitled.webp?ex=69cef074&is=69cd9ef4&hm=aa863c77fa341bedc5f8d70232ac63423d057a0bf1cd754108d8b2a69f372266&"
+    ],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/1Z00Pq7Lr3HcvdLTGSFhH6iCdf_3vzr06/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "salePercent": 20,
+    "active": true,
+    "createdAt": "2026-04-02T10:50:22.246Z"
   }
 ]
