@@ -47,7 +47,7 @@ export async function notifyNewProduct(product: {
     .filter(Boolean)
     .join(" / ") || "FREE"
 
-  await sendWebhook(url, "@everyone", [
+  await sendWebhook(url, "<@&1464064399479406633>", [
     {
       title: `🆕 New Product — ${product.name}`,
       description: product.description.slice(0, 200) + (product.description.length > 200 ? "..." : ""),
