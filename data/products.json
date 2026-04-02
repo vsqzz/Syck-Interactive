@@ -353,5 +353,25 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T10:39:35.914Z"
+  },
+  {
+    "id": "3d-model-capes-ll1dkh",
+    "name": "3D Model Capes",
+    "description": "Cheap 3D capes with bones meant for Smartbone 1 and 2.0 easy to configure and smooth with movement and wind physics",
+    "category": "Models",
+    "fileType": ".rbxm",
+    "features": [],
+    "robuxPrice": 500,
+    "paypalPrice": 10,
+    "mainImage": "https://i.imgur.com/NM4kMeJ.png",
+    "galleryImages": [
+      "https://youtu.be/DAo8f7xqBN0"
+    ],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/1Cepd3Q5cFdHsWYb03pMvEnGhRI5x9DCB/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T10:42:49.063Z"
   }
 ]
