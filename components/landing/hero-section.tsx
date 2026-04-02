@@ -107,6 +107,7 @@ function BlurWord({ word, trigger }: { word: string; trigger: number }) {
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
   const [wordIndex, setWordIndex] = useState(0);
+  const [stats, setStats] = useState<{ products: number; members: number } | null>(null);
 
   useEffect(() => {
     setIsVisible(true);
@@ -116,6 +117,17 @@ export function HeroSection() {
     const interval = setInterval(() => {
       setWordIndex((prev) => (prev + 1) % words.length);
     }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const fetchStats = () =>
+      fetch("/api/stats")
+        .then((r) => r.json())
+        .then((d) => setStats(d))
+        .catch(() => {});
+    fetchStats();
+    const interval = setInterval(fetchStats, 30_000);
     return () => clearInterval(interval);
   }, []);
 
@@ -232,15 +244,21 @@ export function HeroSection() {
       >
         <div className="max-w-[1400px] mx-auto flex items-start gap-10 lg:gap-20">
           {[
-            { value: "500+",  label: "products available" },
-            { value: "99%",   label: "delivery success rate" },
-            { value: "R$+$",  label: "Robux & PayPal accepted" },
+            {
+              value: stats ? (stats.products > 0 ? `${stats.products}` : "0") : "—",
+              label: "products available",
+            },
+            {
+              value: stats ? (stats.members > 0 ? `${stats.members.toLocaleString()}` : "0") : "—",
+              label: "members signed in",
+            },
+            { value: "R$+$", label: "Robux & PayPal accepted" },
           ].map((stat) => (
             <div key={stat.label} className="flex flex-col gap-2">
-              <span className="text-3xl lg:text-4xl font-display text-white">{stat.value}</span>
-              <span className="text-xs text-white/50 leading-tight">
-                {stat.label}
+              <span className="text-3xl lg:text-4xl font-display text-white tabular-nums">
+                {stat.value}
               </span>
+              <span className="text-xs text-white/50 leading-tight">{stat.label}</span>
             </div>
           ))}
         </div>

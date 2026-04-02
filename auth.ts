@@ -1,5 +1,6 @@
 import NextAuth from "next-auth"
 import Discord from "next-auth/providers/discord"
+import { upsertUser } from "@/lib/users"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
@@ -9,10 +10,15 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     }),
   ],
   callbacks: {
-    jwt({ token, profile }) {
+    async jwt({ token, profile }) {
       if (profile) {
         token.discordId = (profile as any).id
         token.avatar = (profile as any).avatar
+        // Record this user so the member count stays accurate
+        await upsertUser(
+          (profile as any).id,
+          (profile as any).username ?? (profile as any).global_name ?? "Unknown"
+        ).catch(() => {}) // never block sign-in on storage errors
       }
       return token
     },
