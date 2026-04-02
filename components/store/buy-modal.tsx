@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react"
 import { useSession, signIn } from "next-auth/react"
-import { X, Zap, DollarSign, Tag, Copy, Check, Loader2, AlertCircle, ExternalLink } from "lucide-react"
+import { X, Tag, Copy, Check, Loader2, AlertCircle } from "lucide-react"
 import type { Product } from "@/lib/products"
 import { computeSalePrice } from "@/lib/utils-server"
+import { RobuxIcon } from "@/components/icons/robux-icon"
+import { PayPalIcon } from "@/components/icons/paypal-icon"
 
 interface BuyModalProps {
   product: Product | null
@@ -27,6 +29,7 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
+  const [autoApproved, setAutoApproved] = useState(false)
 
   useEffect(() => {
     if (product) {
@@ -107,6 +110,7 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error)
+      setAutoApproved(data.autoApproved === true)
       setRobuxStep("done")
     } catch (e: any) {
       setError(e.message)
@@ -142,19 +146,24 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
         </div>
 
         {robuxStep === "done" ? (
-          // Submitted (PayPal or waiting for approval)
           <div className="p-6 text-center">
-            <div className="w-12 h-12 rounded-full bg-[#67e8f9]/10 border border-[#67e8f9]/30 flex items-center justify-center mx-auto mb-4">
-              <Check className="w-6 h-6 text-[#67e8f9]" />
+            <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 ${autoApproved ? "bg-green-500/10 border border-green-500/30" : "bg-[#67e8f9]/10 border border-[#67e8f9]/30"}`}>
+              <Check className={`w-6 h-6 ${autoApproved ? "text-green-400" : "text-[#67e8f9]"}`} />
             </div>
-            <h3 className="font-display text-lg mb-2">Submitted!</h3>
+            <h3 className="font-display text-lg mb-2">
+              {autoApproved ? "Payment Approved!" : "Submitted!"}
+            </h3>
             <p className="text-sm text-muted-foreground">
-              Your payment is being reviewed. Once approved, you can download from{" "}
-              <a href="/purchases" className="text-[#eca8d6] hover:underline">My Purchases</a>.
+              {autoApproved
+                ? <>Your payment was verified automatically. Your file is ready —{" "}
+                    <a href="/purchases" className="text-[#eca8d6] hover:underline">download it now</a>.</>
+                : <>Your payment is being reviewed. Once approved, you can download from{" "}
+                    <a href="/purchases" className="text-[#eca8d6] hover:underline">My Purchases</a>.</>
+              }
             </p>
-            <button onClick={onClose} className="mt-6 w-full py-2 bg-[oklch(0.14_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm text-sm font-mono hover:bg-[oklch(0.18_0.008_260)] transition-colors">
-              Close
-            </button>
+            <a href="/purchases" className="mt-6 w-full py-2 bg-[oklch(0.14_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm text-sm font-mono hover:bg-[oklch(0.18_0.008_260)] transition-colors block text-center">
+              {autoApproved ? "Go to My Purchases" : "Close"}
+            </a>
           </div>
         ) : robuxStep === "waiting" && robuxCode ? (
           // Robux code display
@@ -175,18 +184,6 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
                 Code expires in 30 minutes. After payment, visit My Purchases.
               </p>
             </div>
-            
-            {/* Payment Hub Button */}
-            <a
-              href="https://www.roblox.com/games/91093048274812/Payment-Hub"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full mb-3 py-2.5 bg-[#fbbf24]/20 border border-[#fbbf24]/40 text-[#fbbf24] font-mono text-sm font-bold rounded-sm hover:bg-[#fbbf24]/30 transition-colors flex items-center justify-center gap-2"
-            >
-              <ExternalLink className="w-4 h-4" />
-              Open Payment Hub in Roblox
-            </a>
-            
             <button onClick={onClose} className="w-full py-2 bg-[oklch(0.14_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm text-sm font-mono hover:bg-[oklch(0.18_0.008_260)] transition-colors">
               Got it
             </button>
@@ -198,15 +195,15 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
               <div className="flex mb-5 bg-[oklch(0.06_0.008_260)] rounded-sm border border-[oklch(0.18_0.008_260)] p-0.5">
                 <button
                   onClick={() => { setTab("robux"); setCouponResult(null) }}
-                  className={`flex-1 flex items-center justify-center gap-1.5 py-2 text-sm font-mono rounded-sm transition-all ${tab === "robux" ? "bg-[oklch(0.14_0.008_260)] text-foreground" : "text-muted-foreground hover:text-foreground"}`}
+                  className={`flex-1 flex items-center justify-center gap-2 py-2 text-sm font-mono rounded-sm transition-all ${tab === "robux" ? "bg-[oklch(0.14_0.008_260)] text-foreground" : "text-muted-foreground hover:text-foreground"}`}
                 >
-                  <Zap className="w-3.5 h-3.5" /> Robux
+                  <RobuxIcon size={16} /> Robux
                 </button>
                 <button
                   onClick={() => { setTab("paypal"); setCouponResult(null) }}
-                  className={`flex-1 flex items-center justify-center gap-1.5 py-2 text-sm font-mono rounded-sm transition-all ${tab === "paypal" ? "bg-[oklch(0.14_0.008_260)] text-foreground" : "text-muted-foreground hover:text-foreground"}`}
+                  className={`flex-1 flex items-center justify-center gap-2 py-2 text-sm font-mono rounded-sm transition-all ${tab === "paypal" ? "bg-[oklch(0.14_0.008_260)] text-foreground" : "text-muted-foreground hover:text-foreground"}`}
                 >
-                  <DollarSign className="w-3.5 h-3.5" /> PayPal
+                  <PayPalIcon size={16} /> PayPal
                 </button>
               </div>
             )}
@@ -214,23 +211,25 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
             {/* Price display */}
             <div className="mb-5 p-3 bg-[oklch(0.07_0.008_260)] border border-[oklch(0.14_0.008_260)] rounded-sm">
               {tab === "robux" ? (
-                <div className="flex items-baseline gap-2">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <RobuxIcon size={22} />
                   <span className="text-2xl font-mono font-bold text-[#fbbf24]">
-                    R${finalRobux.toLocaleString()}
+                    {finalRobux.toLocaleString()}
                   </span>
                   {hasDiscount && (
                     <span className="text-sm text-muted-foreground line-through font-mono">
-                      R${product.robuxPrice.toLocaleString()}
+                      {product.robuxPrice.toLocaleString()}
                     </span>
                   )}
                   {couponResult?.valid && (
                     <span className="text-xs text-[#67e8f9] font-mono">
-                      -{couponResult.discountAmount} R$ coupon
+                      -{couponResult.discountAmount} coupon
                     </span>
                   )}
                 </div>
               ) : (
-                <div className="flex items-baseline gap-2">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <PayPalIcon size={22} />
                   <span className="text-2xl font-mono font-bold text-[#67e8f9]">
                     ${typeof finalPaypal === "number" ? finalPaypal.toFixed(2) : "—"}
                   </span>
@@ -309,8 +308,8 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
                 disabled={loading}
                 className="w-full py-2.5 bg-[#fbbf24] hover:bg-[#f59e0b] text-black font-mono text-sm font-bold rounded-sm transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
               >
-                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Zap className="w-4 h-4" />}
-                {loading ? "Generating..." : `Buy with Robux — R$${finalRobux.toLocaleString()}`}
+                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <RobuxIcon size={16} />}
+                {loading ? "Generating..." : `Buy with Robux — ${finalRobux.toLocaleString()}`}
               </button>
             ) : (
               <button
@@ -318,8 +317,8 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
                 disabled={loading}
                 className="w-full py-2.5 bg-[#0070ba] hover:bg-[#005ea6] text-white font-mono text-sm font-bold rounded-sm transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
               >
-                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <DollarSign className="w-4 h-4" />}
-                {loading ? "Submitting..." : `Submit PayPal — $${typeof finalPaypal === "number" ? finalPaypal.toFixed(2) : "—"}`}
+                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <PayPalIcon size={16} />}
+                {loading ? "Verifying..." : `Submit PayPal — $${typeof finalPaypal === "number" ? finalPaypal.toFixed(2) : "—"}`}
               </button>
             )}
           </div>

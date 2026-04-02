@@ -25,9 +25,33 @@ export default function SalesPage() {
     async function load() {
       if (!session?.user?.discordId) return
       try {
-        const res = await fetch("/api/seller/sales")
-        const data = await res.json()
-        setSales(Array.isArray(data) ? data : [])
+        // Get all paypal payments where sellerId = me
+        const [robuxRes, paypalRes] = await Promise.all([
+          // Robux: purchases of products I created
+          fetch("/api/products").then(r => r.json()),
+          fetch("/api/admin/paypal?all=true").then(r => r.json()).catch(() => []),
+        ])
+
+        const myProductIds = Array.isArray(robuxRes)
+          ? robuxRes.filter((p: any) => p.creatorId === session.user.discordId).map((p: any) => p.id)
+          : []
+
+        const paypalSales = Array.isArray(paypalRes)
+          ? paypalRes
+              .filter((p: any) => p.sellerId === session.user.discordId)
+              .map((p: any) => ({
+                id: p.id,
+                type: "paypal" as const,
+                productName: p.productName,
+                buyerUsername: p.buyerUsername,
+                price: p.paypalPrice,
+                currency: "$",
+                status: p.status,
+                createdAt: p.createdAt,
+              }))
+          : []
+
+        setSales(paypalSales)
         setLoading(false)
         setTimeout(() => setVisible(true), 50)
       } catch {
@@ -37,12 +61,8 @@ export default function SalesPage() {
     load()
   }, [session])
 
-  const paypalRevenue = sales
-    .filter(s => s.type === "paypal" && s.status === "completed")
-    .reduce((sum, s) => sum + s.price, 0)
-
-  const robuxRevenue = sales
-    .filter(s => s.type === "robux" && s.status === "completed")
+  const totalRevenue = sales
+    .filter(s => s.status === "completed")
     .reduce((sum, s) => sum + s.price, 0)
 
   return (
@@ -55,28 +75,16 @@ export default function SalesPage() {
       </div>
 
       {/* Summary */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        <div className="bg-[oklch(0.09_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm p-5">
-          <p className="text-xs font-mono text-muted-foreground mb-2">Robux Revenue</p>
-          <p className="text-2xl font-mono font-bold text-[#fbbf24]">
-            R${robuxRevenue.toLocaleString()}
-          </p>
-        </div>
+      <div className="grid grid-cols-2 gap-4 mb-8">
         <div className="bg-[oklch(0.09_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm p-5">
           <p className="text-xs font-mono text-muted-foreground mb-2">PayPal Revenue</p>
           <p className="text-2xl font-mono font-bold text-[#67e8f9]">
-            ${paypalRevenue.toFixed(2)}
+            ${totalRevenue.toFixed(2)}
           </p>
         </div>
         <div className="bg-[oklch(0.09_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm p-5">
           <p className="text-xs font-mono text-muted-foreground mb-2">Total Orders</p>
           <p className="text-2xl font-mono font-bold text-foreground">{sales.length}</p>
-        </div>
-        <div className="bg-[oklch(0.09_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm p-5">
-          <p className="text-xs font-mono text-muted-foreground mb-2">Completed</p>
-          <p className="text-2xl font-mono font-bold text-foreground">
-            {sales.filter(s => s.status === "completed").length}
-          </p>
         </div>
       </div>
 

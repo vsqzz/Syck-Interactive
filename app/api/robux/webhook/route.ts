@@ -1,6 +1,6 @@
 import { getPurchaseByCode, completePurchase } from "@/lib/purchases"
 import { createDownloadRecord } from "@/lib/downloads"
-import { notifyRobuxPaymentCompleted } from "@/lib/discord-webhook"
+import { notifySale } from "@/lib/discord"
 import { NextRequest, NextResponse } from "next/server"
 
 // Called by the Roblox game after a Developer Product purchase succeeds.
@@ -54,12 +54,14 @@ export async function POST(req: NextRequest) {
   await completePurchase(purchase.id)
   await createDownloadRecord(purchase.buyerDiscordId, purchase.productId, purchase.id)
 
-  // Send Discord notification for completed Robux payment
-  await notifyRobuxPaymentCompleted(
-    purchase.productName,
-    purchase.buyerUsername,
-    robuxAmount
-  )
+  notifySale({
+    productName: purchase.productName,
+    productId: purchase.productId,
+    buyerUsername: purchase.buyerUsername,
+    buyerDiscordId: purchase.buyerDiscordId,
+    amount: purchase.robuxPrice,
+    method: "robux",
+  }).catch(() => {})
 
   return NextResponse.json({ ok: true, purchaseId: purchase.id })
 }

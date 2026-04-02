@@ -1,10 +1,12 @@
 import { auth } from "@/auth"
 import { getProductById } from "@/lib/products"
 import { getSellerProfile } from "@/lib/seller-profiles"
-import { createPayPalPayment } from "@/lib/paypal"
+import { createPayPalPayment, approvePayPalPayment } from "@/lib/paypal"
+import { createDownloadRecord } from "@/lib/downloads"
 import { computeSalePrice } from "@/lib/utils-server"
 import { validateCoupon, useCoupon } from "@/lib/discounts"
-import { notifyNewPayPalOrder } from "@/lib/discord-webhook"
+import { verifyPayPalTransaction } from "@/lib/paypal-verify"
+import { notifySale } from "@/lib/discord"
 import { NextRequest, NextResponse } from "next/server"
 
 export async function POST(req: NextRequest) {
@@ -57,17 +59,38 @@ export async function POST(req: NextRequest) {
     transactionId
   )
 
-  // Send Discord notification for new PayPal order
-  await notifyNewPayPalOrder(
-    product.name,
-    session.user.name ?? "Unknown",
-    finalPrice,
-    transactionId
+  // Try automatic verification via PayPal REST API
+  const { verified, manual, error: verifyError } = await verifyPayPalTransaction(
+    transactionId,
+    finalPrice
   )
 
-  return NextResponse.json({
-    ok: true,
-    paymentId: payment.id,
-    sellerPaypalEmail: sellerProfile?.paypalEmail,
-  })
+  if (verified) {
+    await approvePayPalPayment(payment.id)
+    await createDownloadRecord(session.user.discordId, productId, payment.id)
+
+    notifySale({
+      productName: product.name,
+      productId: product.id,
+      buyerUsername: session.user.name ?? "Unknown",
+      buyerDiscordId: session.user.discordId,
+      sellerUsername: product.creatorName,
+      amount: finalPrice,
+      method: "paypal",
+    }).catch(() => {})
+
+    return NextResponse.json({ ok: true, autoApproved: true, paymentId: payment.id })
+  }
+
+  if (manual) {
+    // No PayPal API credentials configured — manual seller approval
+    return NextResponse.json({
+      ok: true,
+      autoApproved: false,
+      paymentId: payment.id,
+      sellerPaypalEmail: sellerProfile?.paypalEmail,
+    })
+  }
+
+  return NextResponse.json({ error: verifyError ?? "Payment verification failed" }, { status: 400 })
 }

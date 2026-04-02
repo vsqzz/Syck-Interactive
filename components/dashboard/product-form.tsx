@@ -11,8 +11,9 @@ interface ProductFormProps {
 }
 
 const CATEGORIES = [
-  "Systems", "Free", "UI", "Models",
-  "Websites", "Boats", "Vehicles",
+  "Admin Systems", "Combat Systems", "UI Frameworks", "Minigames",
+  "Tools & Utilities", "Animation Packs", "Vehicle Systems", "Economy Systems",
+  "Social Systems", "Other",
 ]
 
 const FILE_TYPES = [".rbxm", ".rbxmx", ".lua", ".rbxl", ".rbxlx", ".zip", ".model", "other"]
@@ -228,17 +229,14 @@ export function ProductForm({ product, isEdit }: ProductFormProps) {
 
         {/* Main Image URL */}
         <div className="md:col-span-2">
-          <label className={labelClass}>Main Image or YouTube URL (optional)</label>
+          <label className={labelClass}>Main Image URL (optional)</label>
           <input
             type="url"
             value={form.mainImage}
             onChange={e => setForm(f => ({ ...f, mainImage: e.target.value }))}
-            placeholder="https://... or https://youtube.com/watch?v=..."
+            placeholder="https://..."
             className={inputClass}
           />
-          <p className="text-xs text-muted-foreground/60 mt-1 font-mono">
-            Supports image URLs or YouTube links (will display embedded video on product page)
-          </p>
         </div>
 
         {/* Download URL */}

@@ -2,6 +2,7 @@ import { auth } from "@/auth"
 import { getAllProducts, getActiveProducts, createProduct } from "@/lib/products"
 import { getSellerProfile } from "@/lib/seller-profiles"
 import { isAdmin } from "@/lib/utils-server"
+import { notifyNewProduct } from "@/lib/discord"
 import { nanoid } from "@/lib/nanoid"
 import { NextRequest, NextResponse } from "next/server"
 
@@ -46,7 +47,7 @@ export async function POST(req: NextRequest) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "") + "-" + nanoid(6).toLowerCase()
 
-  await createProduct({
+  const product = {
     id,
     name,
     description,
@@ -65,7 +66,20 @@ export async function POST(req: NextRequest) {
     salePercent,
     active: true,
     createdAt: new Date().toISOString(),
-  })
+  }
+
+  await createProduct(product)
+
+  notifyNewProduct({
+    id: product.id,
+    name: product.name,
+    description: product.description,
+    category: product.category,
+    robuxPrice: product.robuxPrice,
+    paypalPrice: product.paypalPrice,
+    creatorName: product.creatorName,
+    mainImage: product.mainImage,
+  }).catch(() => {})
 
   return NextResponse.json({ ok: true, id })
 }

@@ -9,8 +9,8 @@ import { Search, Filter, Loader2 } from "lucide-react"
 
 const CATEGORIES = [
   "All",
-  "Systems", "Free", "UI", "Models",
-  "Websites", "Boats", "Vehicles",
+  "Systems", "Free", "Models", "Websites", "UI",
+  "Vehicles", "Boats", "Scripts", "Maps", "Tools", "Other",
 ]
 
 export default function StorePage() {
