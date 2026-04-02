@@ -299,5 +299,30 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T10:35:55.648Z"
+  },
+  {
+    "id": "anime-loading-screen-rw9rhn",
+    "name": "Anime Loading Screen",
+    "description": "Put script inside of ReplicatedFirst\n",
+    "category": "Systems",
+    "fileType": ".rbxm",
+    "features": [
+      "Animations",
+      "Sliding",
+      "Rotating texts",
+      "Tips"
+    ],
+    "robuxPrice": 250,
+    "paypalPrice": 7.99,
+    "mainImage": "https://i.imgur.com/uAkO4PI.png",
+    "galleryImages": [
+      "https://youtu.be/uBuQt-BVsNE"
+    ],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/1diqraUMvuMWoDQv4Ssp2n2iDs-6pQ3Uu/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T10:37:27.382Z"
   }
 ]
