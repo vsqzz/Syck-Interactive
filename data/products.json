@@ -145,5 +145,34 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T10:19:59.247Z"
+  },
+  {
+    "id": "anime-movement-v2-5bumpv",
+    "name": "Anime Movement v2",
+    "description": "Clean smooth movement system",
+    "category": "Systems",
+    "fileType": ".rbxl",
+    "features": [
+      "Animations",
+      "Scripted",
+      "Dash",
+      "Multiple Idle Varients"
+    ],
+    "robuxPrice": 500,
+    "paypalPrice": 10,
+    "mainImage": "https://i.imgur.com/8DYHUcO.png",
+    "galleryImages": [
+      "https://youtu.be/sZMA7O-TFsg"
+    ],
+    "tags": [
+      "anime",
+      "movement",
+      "animation"
+    ],
+    "downloadUrl": "https://drive.google.com/file/d/1gA-tw6-wefeeg99p_Ph47wNu9YTWqYDR/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T10:23:03.506Z"
   }
 ]
