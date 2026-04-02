@@ -440,5 +440,29 @@
     "salePercent": 20,
     "active": true,
     "createdAt": "2026-04-02T10:50:22.246Z"
+  },
+  {
+    "id": "dug-o3zrdq",
+    "name": "DUG",
+    "description": "Fishing and digging system IS BACK",
+    "category": "Free",
+    "fileType": ".rbxm",
+    "features": [
+      "uh",
+      "fishing",
+      "uh",
+      "digging",
+      "uh",
+      "yes."
+    ],
+    "robuxPrice": 0,
+    "mainImage": "https://i.imgur.com/KeT6lZN.png",
+    "galleryImages": [],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/1-fpNezY6NAYSt2r7y01i8xuJACkZN8PT/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T10:51:50.079Z"
   }
 ]
