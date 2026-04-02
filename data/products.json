@@ -29,5 +29,37 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T09:28:55.879Z"
+  },
+  {
+    "id": "lamborghini-aventador-tdtndv",
+    "name": "Lamborghini Aventador",
+    "description": "High Quality Italian Supercar",
+    "category": "Vehicles",
+    "fileType": ".rbxm",
+    "features": [
+      "No errors",
+      "1.7 Chassis",
+      "Accurate Tune",
+      "1.7 chassis sounds",
+      "Great handling",
+      "Tire smoke/marks",
+      "VG Epiclights V4",
+      "Working Spoiler",
+      "BackFire (Exhaust flames)"
+    ],
+    "robuxPrice": 300,
+    "paypalPrice": 2.5,
+    "mainImage": "https://i.imgur.com/2k5hpmv.jpeg",
+    "galleryImages": [],
+    "tags": [
+      "car",
+      "lamborghini",
+      "aventador"
+    ],
+    "downloadUrl": "https://drive.google.com/file/d/1Yb68giLq7NpfJLOH7m5Y_ShLbn0j6v1B/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T09:36:35.624Z"
   }
 ]
