@@ -11,7 +11,6 @@ interface ProductFormProps {
 }
 
 const CATEGORIES = [
-  "All",
   "Systems", "Free", "UI", "Models",
   "Websites", "Boats", "Vehicles",
 ]
