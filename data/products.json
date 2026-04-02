@@ -201,5 +201,33 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T10:25:40.727Z"
+  },
+  {
+    "id": "cinematic-loading-screen-2-zhlcyb",
+    "name": "Cinematic Loading Screen 2",
+    "description": "You will need an animation spoofer.\nOnly allowed to be used in community games, NOT allowed to resell or distribute anywhere else. Legal actions will be taken for all paid products we have!\n\nDo not buy if unsure!",
+    "category": "Systems",
+    "fileType": ".rbxl",
+    "features": [
+      "3D Character model",
+      "Fully scripted Cinematic system",
+      "Easily customizable"
+    ],
+    "robuxPrice": 1000,
+    "paypalPrice": 25,
+    "mainImage": "https://i.imgur.com/eiFihGf.png",
+    "galleryImages": [
+      "https://youtu.be/Nlq0_kjOgEU"
+    ],
+    "tags": [
+      "loading",
+      "anime",
+      "animations"
+    ],
+    "downloadUrl": "https://drive.google.com/file/d/1J12fXA1h0rOPKd50LdqT3gr5cdTZfC94/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T10:27:48.196Z"
   }
 ]
