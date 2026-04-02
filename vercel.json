@@ -1,0 +1,3 @@
+{
+  "ignoreCommand": "git diff --name-only HEAD^ HEAD | grep -vE '^data/' | grep -q . && exit 1 || exit 0"
+}
