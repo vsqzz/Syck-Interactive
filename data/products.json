@@ -121,5 +121,29 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T10:17:30.545Z"
+  },
+  {
+    "id": "cinematic-menu-loading-screen-oxyxld",
+    "name": "Cinematic Menu + Loading Screen",
+    "description": "You will need to spoof animations.\nOnly allowed to be used in community games, NOT allowed to resell or distribute anywhere else. Legal actions will be taken for all paid products we have!\n\nIf unsure do NOT buy!",
+    "category": "Systems",
+    "fileType": ".rbxm",
+    "features": [],
+    "robuxPrice": 1500,
+    "paypalPrice": 30,
+    "mainImage": "https://i.imgur.com/m3hi3H9.png",
+    "galleryImages": [
+      "https://youtu.be/nEwze5gMcRQ"
+    ],
+    "tags": [
+      "system",
+      "menu",
+      "loading"
+    ],
+    "downloadUrl": "https://drive.google.com/file/d/1QM92gDy_k_RhRw88Ad_ifQb8FnPSNG3F/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T10:19:59.247Z"
   }
 ]
