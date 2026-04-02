@@ -253,5 +253,27 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T10:29:44.235Z"
+  },
+  {
+    "id": "wand-movement-system-jdlg89",
+    "name": "Wand Movement System",
+    "description": "Only contains model, movement and animations\n",
+    "category": "Systems",
+    "fileType": ".rbxm",
+    "features": [
+      "Wand Model (Tool)Animations"
+    ],
+    "robuxPrice": 500,
+    "paypalPrice": 10,
+    "mainImage": "https://i.imgur.com/3M5mW27.png",
+    "galleryImages": [
+      "https://www.youtube.com/watch?v=9SUTcgl6YpM"
+    ],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/1r_a1IpxArCsInXiK54p_9EVZe9R8B9tP/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T10:32:37.197Z"
   }
 ]
