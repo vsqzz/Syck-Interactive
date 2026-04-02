@@ -22,8 +22,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'COMPUTE - AI Agents for Distributed Computing',
-  description: 'Deploy autonomous AI agents on distributed infrastructure. Offload complex tasks to intelligent workers that run 24/7.',
+  title: 'Syck Interactive™ — Premium Roblox Scripts & Assets',
+  description: 'Browse and buy premium Roblox scripts, GUIs, admin systems, and game tools. Pay with Robux or PayPal. Instant delivery.',
   generator: 'v0.app',
 }
 

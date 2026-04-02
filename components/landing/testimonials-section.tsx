@@ -5,32 +5,32 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Our agents handle 80% of our customer support tickets autonomously. The ROI was immediate.",
-    author: "Sarah Chen",
-    role: "CTO",
-    company: "Meridian Labs",
-    metric: { value: "80%", label: "Ticket resolution" },
+    quote: "Bought an admin system for my RPG and it worked right out of the box. The developer answered my questions within hours.",
+    author: "xDevRoblox",
+    role: "Game Developer",
+    company: "Realm of Valor",
+    metric: { value: "4.9★", label: "average rating" },
   },
   {
-    quote: "We deployed research agents that work 24/7. They surface insights we'd never find manually.",
-    author: "Marcus Webb",
-    role: "Head of Research",
-    company: "Flux Systems",
-    metric: { value: "10x", label: "Research output" },
+    quote: "The GUI kit I got saved me weeks of work. Clean code, well documented. Re-downloaded it three times across projects.",
+    author: "CelestialStudio",
+    role: "Solo Developer",
+    company: "Neon Tycoon",
+    metric: { value: "5×", label: "re-downloads allowed" },
   },
   {
-    quote: "The multi-agent orchestration is incredible. Complex workflows that took weeks now run in hours.",
-    author: "Elena Rodriguez",
-    role: "VP Engineering",
-    company: "Beacon AI",
-    metric: { value: "40x", label: "Faster workflows" },
+    quote: "As a seller, I love that PayPal goes directly to me. Set my price, uploaded my script, made my first sale the same day.",
+    author: "FluxScripts",
+    role: "Script Creator",
+    company: "Syck Interactive",
+    metric: { value: "0%", label: "platform cut on PayPal" },
   },
   {
-    quote: "Security was our biggest concern. The sandboxing and audit trails gave us full confidence.",
-    author: "James Liu",
-    role: "CISO",
-    company: "Prism Analytics",
-    metric: { value: "0", label: "Security incidents" },
+    quote: "The Robux payment hub is seamless. Buyers enter their code in-game and get the file instantly. No friction at all.",
+    author: "PixelForge_RBX",
+    role: "Game Designer",
+    company: "Pixel Tycoon",
+    metric: { value: "< 1min", label: "delivery time" },
   },
 ];
 
@@ -78,11 +78,11 @@ export function TestimonialsSection() {
   const activeTestimonial = testimonials[activeIndex];
 
   return (
-    <section ref={sectionRef} className="relative py-32 lg:py-40 bg-foreground text-background overflow-hidden">
+    <section id="testimonials" ref={sectionRef} className="relative py-32 lg:py-40 bg-foreground text-background overflow-hidden">
       {/* ASCII background pattern */}
       <div className="absolute inset-0 font-mono text-[10px] text-background/[0.02] leading-tight overflow-hidden whitespace-pre select-none">
-        {Array.from({ length: 60 }, (_, i) => 
-          Array.from({ length: 100 }, () => 
+        {Array.from({ length: 60 }, () =>
+          Array.from({ length: 100 }, () =>
             Math.random() > 0.7 ? '"' : ' '
           ).join("")
         ).join("\n")}
@@ -94,16 +94,16 @@ export function TestimonialsSection() {
           <div>
             <span className="inline-flex items-center gap-3 text-sm font-mono text-background/40 mb-4">
               <span className="w-12 h-px bg-background/20" />
-              Testimonials
+              Reviews
             </span>
             <h2 className={`text-4xl lg:text-5xl font-display transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}>
-              Trusted by teams
-              <span className="text-background/40"> worldwide.</span>
+              Trusted by developers
+              <span className="text-background/40"> everywhere.</span>
             </h2>
           </div>
-          
+
           {/* Navigation arrows */}
           <div className="hidden lg:flex items-center gap-2">
             <button
@@ -129,9 +129,9 @@ export function TestimonialsSection() {
             <span className="absolute -left-4 -top-8 text-[200px] font-display text-background/5 leading-none select-none">
               &ldquo;
             </span>
-            
+
             <div className="relative">
-              <blockquote 
+              <blockquote
                 key={activeIndex}
                 className="text-3xl lg:text-4xl xl:text-5xl font-display leading-[1.2] tracking-tight animate-fadeSlideIn"
               >
@@ -158,7 +158,7 @@ export function TestimonialsSection() {
           {/* Metric cards side */}
           <div className="lg:col-span-5 flex flex-col justify-center gap-6">
             {/* Active metric - Large */}
-            <div 
+            <div
               key={`metric-${activeIndex}`}
               className="p-10 border border-background/20 bg-background/5 animate-fadeSlideIn"
             >
@@ -178,7 +178,7 @@ export function TestimonialsSection() {
                   onClick={() => goTo(idx)}
                   className="flex-1 h-1 bg-background/20 overflow-hidden"
                 >
-                  <div 
+                  <div
                     className={`h-full bg-background transition-all duration-300 ${
                       idx === activeIndex ? "w-full" : idx < activeIndex ? "w-full opacity-50" : "w-0"
                     }`}
@@ -188,23 +188,23 @@ export function TestimonialsSection() {
               ))}
             </div>
 
-            {/* Company list */}
+            {/* Reviewer list */}
             <div className="mt-4 pt-6 border-t border-background/10">
               <span className="text-xs font-mono text-background/30 uppercase tracking-widest block mb-4">
-                Featured companies
+                Recent reviews
               </span>
               <div className="flex flex-wrap gap-3">
                 {testimonials.map((t, idx) => (
                   <button
-                    key={t.company}
+                    key={t.author}
                     onClick={() => goTo(idx)}
                     className={`px-4 py-2 text-sm border transition-all ${
-                      idx === activeIndex 
-                        ? "border-background/40 text-background" 
+                      idx === activeIndex
+                        ? "border-background/40 text-background"
                         : "border-background/10 text-background/40 hover:border-background/30"
                     }`}
                   >
-                    {t.company}
+                    {t.author}
                   </button>
                 ))}
               </div>

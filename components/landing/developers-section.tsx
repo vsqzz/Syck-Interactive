@@ -3,27 +3,27 @@
 import { useState, useEffect, useRef } from "react";
 
 const features = [
-  { 
-    title: "TypeScript native", 
-    description: "Full type safety for agent configs and responses."
+  {
+    title: "Set your own price",
+    description: "Robux, PayPal, or both. You control what buyers pay.",
   },
-  { 
-    title: "Streaming results", 
-    description: "Watch your agents think and act in real-time."
+  {
+    title: "Keep your earnings",
+    description: "PayPal sales go direct to you — no platform cut taken.",
   },
-  { 
-    title: "Multi-model support", 
-    description: "OpenAI, Anthropic, Mistral, or bring your own."
+  {
+    title: "Dashboard analytics",
+    description: "Track sales, revenue, and download counts in real time.",
   },
-  { 
-    title: "Local debugging", 
-    description: "Test agents locally before deploying to cloud."
+  {
+    title: "Easy uploads",
+    description: "Post a new product in minutes. Add images, description, and file.",
   },
 ];
 
 export function DevelopersSection() {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLSection>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,7 +38,7 @@ export function DevelopersSection() {
   }, []);
 
   return (
-    <section id="developers" ref={sectionRef} className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="sell" ref={sectionRef} className="relative py-24 lg:py-32 overflow-hidden">
 
       {/* Image — absolute, bottom-right, behind all content */}
       <div
@@ -60,7 +60,7 @@ export function DevelopersSection() {
 
       {/* All text content sits on top */}
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
-        {/* Header — Full width */}
+        {/* Header */}
         <div
           className={`mb-16 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -68,12 +68,12 @@ export function DevelopersSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30" />
-            Developer SDK
+            For Sellers
           </span>
           <h2 className="text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9]">
-            Code your agents.
+            Earn from
             <br />
-            <span className="text-muted-foreground">Or let them code.</span>
+            <span className="text-muted-foreground">your scripts.</span>
           </h2>
         </div>
 
@@ -84,8 +84,7 @@ export function DevelopersSection() {
           }`}
         >
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-md">
-            A powerful SDK for building, deploying, and orchestrating AI agents. 
-            Define behaviors in code or natural language.
+            List your Roblox scripts and tools on Syck Interactive. Set your own prices, accept Robux or PayPal, and track every sale from your dashboard.
           </p>
           <div className="grid grid-cols-2 gap-6">
             {features.map((feature, index) => (

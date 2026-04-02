@@ -5,39 +5,42 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Define",
-    subtitle: "your agent",
-    description: "Describe what your agent should do. Set its capabilities, constraints, and goals in natural language or code.",
-    code: `const researcher = new Agent({
-  role: 'Research Analyst',
-  capabilities: ['web', 'docs', 'api'],
-  memory: true,
-  autonomy: 'full'
-})`,
+    title: "Browse",
+    subtitle: "the store",
+    description: "Explore hundreds of premium Roblox scripts, GUIs, admin systems, and game tools. Filter by category, price, and type.",
+    code: `// Admin System — v3.2
+// Includes: ban, kick, speed,
+// fly, spectate, and more.
+// Category: Admin
+// Price: R$ 350 or $5.99
+// Downloads: 847`,
   },
   {
     number: "02",
-    title: "Assign",
-    subtitle: "the task",
-    description: "Give your agent a mission. It breaks down complex tasks into steps and executes them autonomously.",
-    code: `await researcher.execute({
-  task: 'Analyze competitor pricing',
-  sources: ['public-data', 'news'],
-  output: 'structured-report',
-  deadline: '2h'
-})`,
+    title: "Pay",
+    subtitle: "your way",
+    description: "Choose Robux via our in-game Payment Hub, or pay with PayPal. Your transaction is verified before delivery.",
+    code: `// Option A: Robux
+// Join Payment Hub game
+// Enter your 6-digit code
+// Pay R$ in-game → file sent
+
+// Option B: PayPal
+// Send as Friends & Family
+// Submit transaction ID
+// Creator verifies → file sent`,
   },
   {
     number: "03",
-    title: "Monitor",
-    subtitle: "& scale",
-    description: "Track progress in real-time. Spin up more agents as needed. Pay only for compute used.",
-    code: `optimus.dashboard({
-  agents: [researcher],
-  metrics: ['tasks', 'latency', 'cost'],
-  alerts: true
-})
-// 847 tasks completed today`,
+    title: "Download",
+    subtitle: "& build",
+    description: "Get your file immediately. Sign in with Discord to access your purchase history and re-download up to 5 times.",
+    code: `// Your Purchases
+// ✓ Admin GUI v3       5/5 ↓
+// ✓ Loading Screen    3/5 ↓
+// ✓ Anime Animations  5/5 ↓
+// → Re-downloads: up to 5x
+// → Sign in to access`,
   },
 ];
 
@@ -88,9 +91,9 @@ export function HowItWorksSection() {
             <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.85] transition-all duration-1000 delay-100 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
             }`}>
-              <span className="block">Define.</span>
-              <span className="block text-white/30">Deploy.</span>
-              <span className="block text-white/10">Scale.</span>
+              <span className="block">Browse.</span>
+              <span className="block text-white/30">Pay.</span>
+              <span className="block text-white/10">Download.</span>
             </h2>
           </div>
 

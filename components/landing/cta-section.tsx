@@ -39,55 +39,57 @@ export function CtaSection() {
           onMouseMove={handleMouseMove}
         >
           {/* Spotlight effect */}
-          <div 
+          <div
             className="absolute inset-0 opacity-10 pointer-events-none transition-opacity duration-300"
             style={{
               background: `radial-gradient(600px circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(0,0,0,0.15), transparent 40%)`
             }}
           />
-          
+
           <div className="relative z-10 px-8 lg:px-16 py-16 lg:py-24">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
               {/* Left content */}
               <div className="flex-1">
                 <h2 className="text-6xl md:text-7xl lg:text-[72px] font-display tracking-tight mb-8 leading-[0.95]">
-                  Ready to delegate
+                  Ready to level up
                   <br />
-                  to AI agents?
+                  your game?
                 </h2>
 
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
-                  Join teams automating complex workflows with COMPUTE agents. 
-                  Deploy your first agent in minutes.
+                  Browse hundreds of premium Roblox scripts, pay with Robux or PayPal, and get your file in under a minute.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
                   <Button
                     size="lg"
                     className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
+                    onClick={() => window.location.href = "/store"}
                   >
-                    Deploy your first agent
+                    Browse the store
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
                     className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
+                    onClick={() => window.location.href = "/dashboard"}
                   >
-                    Book a demo
+                    Start selling
                   </Button>
                 </div>
 
                 <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  1,000 free tasks with COMPUTE
+                  Free to browse — sign in with Discord to purchase
                 </p>
               </div>
 
               {/* Right image */}
               <div className="hidden lg:flex items-end justify-center w-[600px] h-[650px] -mr-16">
                 <img
-                  src="/images/bridge.png"
-                  alt="Two trees connected by glowing arcs"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png"
+                  alt=""
+                  aria-hidden="true"
                   className="w-full h-full object-contain object-bottom"
                 />
               </div>

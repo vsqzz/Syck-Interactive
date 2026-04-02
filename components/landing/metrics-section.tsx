@@ -3,26 +3,26 @@
 import { useEffect, useState, useRef } from "react";
 
 const metrics = [
-  { 
-    value: 12847392, 
-    suffix: "", 
+  {
+    value: 500,
+    suffix: "+",
     prefix: "",
-    label: "Tasks completed today",
-    sublabel: "by 23,847 active agents",
+    label: "Products available",
+    sublabel: "across all categories",
   },
-  { 
-    value: 99, 
-    suffix: ".99%", 
+  {
+    value: 99,
+    suffix: "%",
     prefix: "",
-    label: "Availability",
-    sublabel: "across all regions",
+    label: "Delivery success rate",
+    sublabel: "Robux & PayPal combined",
   },
-  { 
-    value: 340, 
-    suffix: "ms", 
+  {
+    value: 5,
+    suffix: "min",
     prefix: "<",
-    label: "Average execution",
-    sublabel: "p99 latency",
+    label: "Average delivery time",
+    sublabel: "from payment to file",
   },
 ];
 
@@ -261,7 +261,7 @@ export function MetricsSection() {
             }`}>
               Real-time
               <br />
-              <span className="text-muted-foreground">agent metrics.</span>
+              <span className="text-muted-foreground">store metrics.</span>
             </h2>
           </div>
         </div>
@@ -328,11 +328,14 @@ export function MetricsSection() {
         <div className={`mt-16 pt-8 border-t border-foreground/10 flex flex-wrap items-center gap-x-12 gap-y-4 text-sm font-mono text-muted-foreground transition-all duration-1000 delay-500 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
-          <span>OpenAI GPT-4 Turbo</span>
-          <span>Anthropic Claude 3</span>
-          <span>Mistral Large</span>
-          <span>Llama 3</span>
-          <span className="text-foreground">+12 more models</span>
+          <span>Admin Systems</span>
+          <span>GUI Kits</span>
+          <span>Animations</span>
+          <span>Loading Screens</span>
+          <span>Combat Scripts</span>
+          <span>NPC Systems</span>
+          <span>Economy</span>
+          <span className="text-foreground">+more categories</span>
         </div>
       </div>
     </section>

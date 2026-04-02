@@ -5,27 +5,27 @@ import { useEffect, useRef, useState } from "react";
 const features = [
   {
     number: "01",
-    title: "Autonomous Execution",
-    description: "Deploy AI agents that work independently. They analyze, decide, and execute complex multi-step tasks without human intervention.",
-    stats: { value: "99.7%", label: "task completion" },
+    title: "Instant Delivery",
+    description: "Get your file the moment payment is confirmed. No waiting, no tickets — your download is ready immediately after purchase.",
+    stats: { value: "< 1min", label: "average delivery" },
   },
   {
     number: "02",
-    title: "Distributed Computing",
-    description: "Offload compute-heavy tasks to our global network. Your agents run on optimized infrastructure across 50+ regions worldwide.",
-    stats: { value: "50+", label: "global regions" },
+    title: "Verified Quality",
+    description: "Every script is tested and reviewed before listing. You get working, documented code — not broken placeholders.",
+    stats: { value: "100%", label: "tested before listing" },
   },
   {
     number: "03",
-    title: "Multi-Agent Orchestration",
-    description: "Coordinate teams of specialized agents. They communicate, delegate, and collaborate to solve complex problems together.",
-    stats: { value: "1000x", label: "parallel execution" },
+    title: "Robux & PayPal",
+    description: "Pay with Robux directly in-game using our Payment Hub, or send a PayPal payment and get verified in minutes.",
+    stats: { value: "2", label: "payment methods" },
   },
   {
     number: "04",
-    title: "Secure Sandboxing",
-    description: "Each agent runs in isolated environments. Full audit trails, encrypted execution, and zero data leakage between tasks.",
-    stats: { value: "0", label: "data breaches" },
+    title: "Re-download Anytime",
+    description: "Lost your file? Sign in with Discord and re-download up to 5 times per purchase. Your purchases are always accessible.",
+    stats: { value: "5×", label: "re-downloads per purchase" },
   },
 ];
 
@@ -165,16 +165,16 @@ export function FeaturesSection() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                Intelligent
+                Quality
                 <br />
-                <span className="text-muted-foreground">workers.</span>
+                <span className="text-muted-foreground">scripts.</span>
               </h2>
             </div>
             <div className="lg:col-span-5 lg:pb-4">
               <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}>
-                Deploy autonomous AI agents that execute complex tasks across distributed infrastructure. No supervision required.
+                Everything you need to build, enhance, or launch your Roblox game. Verified, delivered instantly, and backed by real developers.
               </p>
             </div>
           </div>
