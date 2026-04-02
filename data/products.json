@@ -5,13 +5,24 @@
     "description": "High Quality German civilian car",
     "category": "Vehicles",
     "fileType": ".rbxm",
-    "features": [],
+    "features": [
+      "No errors",
+      "1.7 Chassis",
+      "Accurate Tune",
+      "Good sounds",
+      "Great handling",
+      "Tire smoke/marks",
+      "VG Epiclights V4"
+    ],
     "robuxPrice": 200,
     "paypalPrice": 1.5,
     "mainImage": "https://i.imgur.com/5o7BCX6.jpeg",
     "galleryImages": [],
     "tags": [
-      "car"
+      "car",
+      "bmw",
+      "m3",
+      "G81"
     ],
     "downloadUrl": "https://drive.google.com/file/d/1LYsjEFh03rbBK7a8ZlbXQxPy7Rb-qdxM/view?usp=drive_link",
     "creatorId": "1303458703520825457",
