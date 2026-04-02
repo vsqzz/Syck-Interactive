@@ -174,5 +174,32 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T10:23:03.506Z"
+  },
+  {
+    "id": "zone-system-v3-ta9xz8",
+    "name": "Zone System v3",
+    "description": "Clean smooth zone system with good UI",
+    "category": "Systems",
+    "fileType": ".rbxl",
+    "features": [
+      "Added better UI",
+      "Added actual snow for snowlands",
+      "Added windlines",
+      "These settings are different for every zone"
+    ],
+    "robuxPrice": 250,
+    "paypalPrice": 6.99,
+    "mainImage": "https://youtu.be/-uM4FTkcv7Q",
+    "galleryImages": [],
+    "tags": [
+      "system",
+      "zone",
+      "advanced"
+    ],
+    "downloadUrl": "https://drive.google.com/file/d/1rnsPGekysY3v3GjFmSQtDteNVXBjotRG/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T10:25:40.727Z"
   }
 ]
