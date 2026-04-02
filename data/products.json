@@ -76,8 +76,10 @@
     ],
     "robuxPrice": 500,
     "paypalPrice": 10,
-    "mainImage": "https://youtu.be/O4q1HWmDHMk",
-    "galleryImages": [],
+    "mainImage": "https://i.imgur.com/lUSl75w.png",
+    "galleryImages": [
+      "https://youtu.be/O4q1HWmDHMk"
+    ],
     "tags": [
       "loading",
       "system"
