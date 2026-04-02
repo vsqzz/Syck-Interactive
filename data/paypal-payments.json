@@ -8,7 +8,8 @@
     "sellerId": "1303458703520825457",
     "paypalPrice": 1.5,
     "transactionId": "7tg7",
-    "status": "pending",
-    "createdAt": "2026-04-02T09:59:33.365Z"
+    "status": "rejected",
+    "createdAt": "2026-04-02T09:59:33.365Z",
+    "note": "test"
   }
 ]
