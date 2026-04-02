@@ -69,8 +69,9 @@
     "buyerDiscordId": "764512814328446997",
     "buyerUsername": "! Beanie Cat",
     "robuxPrice": 500,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-02T13:41:15.012Z",
-    "createdAt": "2026-04-02T13:11:15.012Z"
+    "createdAt": "2026-04-02T13:11:15.012Z",
+    "completedAt": "2026-04-02T13:11:24.848Z"
   }
 ]
