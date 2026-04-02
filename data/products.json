@@ -373,5 +373,28 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-02T10:42:49.063Z"
+  },
+  {
+    "id": "red-x-black-katana-uilxz4",
+    "name": "Red x Black Katana",
+    "description": "Mid to low poly katana\nYou'll recieve the Studio file\n(No scripts)",
+    "category": "Models",
+    "fileType": ".rbxm",
+    "features": [
+      "low-mid poly",
+      "cheap model"
+    ],
+    "robuxPrice": 150,
+    "paypalPrice": 1.5,
+    "mainImage": "https://i.imgur.com/xUXB95L.jpeg",
+    "galleryImages": [
+      "https://youtu.be/gSuI0IfGEcg"
+    ],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/19_Rg4QD_HkHNrZr8NAVmDCCu1VvIZ0b9/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T10:46:38.552Z"
   }
 ]
