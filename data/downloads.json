@@ -219,8 +219,9 @@
     "buyerDiscordId": "765605687690133576",
     "productId": "bmw-m3-g81-touring-i0sdip",
     "purchaseId": "IIt0IYOG7N0t8Efcf9NlR",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-03T21:48:31.405Z"
+    "createdAt": "2026-04-03T21:48:31.405Z",
+    "lastDownloadAt": "2026-04-03T21:48:39.592Z"
   }
 ]
