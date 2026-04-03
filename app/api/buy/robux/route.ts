@@ -1,8 +1,10 @@
 import { auth } from "@/auth"
 import { getProductById } from "@/lib/products"
 import { createPurchase } from "@/lib/purchases"
+import { createDownloadRecord } from "@/lib/downloads"
 import { computeSalePrice } from "@/lib/utils-server"
 import { validateCoupon, useCoupon } from "@/lib/discounts"
+import { notifySale } from "@/lib/discord"
 import { NextRequest, NextResponse } from "next/server"
 
 export async function POST(req: NextRequest) {
@@ -37,6 +39,31 @@ export async function POST(req: NextRequest) {
     }
     finalPrice = result.finalPrice!
     await useCoupon(couponCode, session.user.discordId)
+  }
+
+  // Free product — skip the payment flow entirely, grant access immediately
+  if (finalPrice === 0) {
+    const purchase = await createPurchase(
+      productId,
+      product.name,
+      session.user.discordId,
+      session.user.name ?? "Unknown",
+      0
+    )
+    // Mark completed right away
+    await createDownloadRecord(session.user.discordId, productId, purchase.id)
+
+    notifySale({
+      productName: product.name,
+      productId: product.id,
+      buyerUsername: session.user.name ?? "Unknown",
+      buyerDiscordId: session.user.discordId,
+      sellerUsername: product.creatorName,
+      amount: 0,
+      method: "robux",
+    }).catch(() => {})
+
+    return NextResponse.json({ free: true, purchaseId: purchase.id })
   }
 
   const purchase = await createPurchase(

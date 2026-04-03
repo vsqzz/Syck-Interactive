@@ -59,6 +59,7 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
   const { robuxFinal, paypalFinal, hasDiscount } = computeSalePrice(product)
   const finalRobux = couponResult?.valid ? Math.floor(couponResult.finalPrice ?? robuxFinal) : robuxFinal
   const finalPaypal = couponResult?.valid ? (couponResult.finalPrice ?? paypalFinal ?? product.paypalPrice) : (paypalFinal ?? product.paypalPrice)
+  const isFree = finalRobux === 0 && !finalPaypal
 
   async function validateCoupon() {
     if (!couponCode.trim() || !product) return
@@ -95,6 +96,12 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error)
+      // Free product — granted immediately, no code needed
+      if (data.free) {
+        setAutoApproved(true)
+        setRobuxStep("done")
+        return
+      }
       setRobuxCode(data.code)
       setPurchaseId(data.purchaseId)
       setRobuxStep("waiting")
@@ -159,16 +166,16 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
 
         {robuxStep === "done" ? (
           <div className="p-6 text-center">
-            <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 ${autoApproved ? "bg-green-500/10 border border-green-500/30" : "bg-[#67e8f9]/10 border border-[#67e8f9]/30"}`}>
-              <Check className={`w-6 h-6 ${autoApproved ? "text-green-400" : "text-[#67e8f9]"}`} />
+            <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-green-500/10 border border-green-500/30">
+              <Check className="w-6 h-6 text-green-400" />
             </div>
             <h3 className="font-display text-lg mb-2">
-              {autoApproved ? "Payment Approved!" : "Submitted!"}
+              {autoApproved ? "You're all set!" : "Submitted!"}
             </h3>
             <p className="text-sm text-muted-foreground">
               {autoApproved
-                ? <>Your payment was verified automatically. Your file is ready —{" "}
-                    <a href="/purchases" className="text-[#eca8d6] hover:underline">download it now</a>.</>
+                ? <>Your file is ready to download —{" "}
+                    <a href="/purchases" className="text-[#eca8d6] hover:underline">go to My Purchases</a>.</>
                 : <>Your payment is being reviewed. Once approved, you can download from{" "}
                     <a href="/purchases" className="text-[#eca8d6] hover:underline">My Purchases</a>.</>
               }
@@ -336,16 +343,16 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
                 onClick={() => signIn("discord")}
                 className="w-full py-2.5 bg-[#5865F2] hover:bg-[#4752C4] text-white font-mono text-sm rounded-sm transition-colors"
               >
-                Sign in with Discord to Buy
+                Sign in with Discord to {isFree ? "Download" : "Buy"}
               </button>
             ) : tab === "robux" ? (
               <button
                 onClick={handleRobuxBuy}
                 disabled={loading}
-                className="w-full py-2.5 bg-[#fbbf24] hover:bg-[#f59e0b] text-black font-mono text-sm font-bold rounded-sm transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+                className={`w-full py-2.5 font-mono text-sm font-bold rounded-sm transition-colors disabled:opacity-50 flex items-center justify-center gap-2 ${isFree ? "bg-[#67e8f9] hover:bg-[#22d3ee] text-black" : "bg-[#fbbf24] hover:bg-[#f59e0b] text-black"}`}
               >
-                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <RobuxIcon size={16} />}
-                {loading ? "Generating..." : `Buy with Robux — ${finalRobux.toLocaleString()}`}
+                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : (isFree ? <Check className="w-4 h-4" /> : <RobuxIcon size={16} />)}
+                {loading ? (isFree ? "Claiming..." : "Generating...") : (isFree ? "Get for Free" : `Buy with Robux — ${finalRobux.toLocaleString()}`)}
               </button>
             ) : (
               <button
