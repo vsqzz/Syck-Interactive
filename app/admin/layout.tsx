@@ -4,11 +4,14 @@ import { useSession } from "next-auth/react"
 import { SiteNav } from "@/components/shared/site-nav"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { ShieldCheck, CreditCard, Tag, LayoutDashboard, Loader2 } from "lucide-react"
+import { ShieldCheck, CreditCard, Tag, LayoutDashboard, Loader2, Users, Star, TrendingUp, Package } from "lucide-react"
 
 const adminLinks = [
   { href: "/admin", label: "Overview", icon: LayoutDashboard, exact: true },
   { href: "/admin/paypal", label: "PayPal Queue", icon: CreditCard },
+  { href: "/admin/sales", label: "All Sales", icon: TrendingUp },
+  { href: "/admin/users", label: "Users", icon: Users },
+  { href: "/admin/reviews", label: "Reviews", icon: Star },
   { href: "/admin/discounts", label: "Discounts", icon: Tag },
 ]
 

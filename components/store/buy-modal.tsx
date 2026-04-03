@@ -23,6 +23,7 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
   const [couponResult, setCouponResult] = useState<{ valid?: boolean; error?: string; discountAmount?: number; finalPrice?: number } | null>(null)
   const [couponLoading, setCouponLoading] = useState(false)
   const [paypalTxId, setPaypalTxId] = useState("")
+  const [sellerPaypalEmail, setSellerPaypalEmail] = useState<string | null>(null)
   const [robuxStep, setRobuxStep] = useState<RobuxStep>("code")
   const [robuxCode, setRobuxCode] = useState<string | null>(null)
   const [purchaseId, setPurchaseId] = useState<string | null>(null)
@@ -39,8 +40,19 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
       setCouponResult(null)
       setError(null)
       setRobuxCode(null)
+      setSellerPaypalEmail(null)
     }
   }, [product])
+
+  // Fetch seller PayPal email when switching to PayPal tab
+  useEffect(() => {
+    if (tab === "paypal" && product && !sellerPaypalEmail) {
+      fetch(`/api/products/${product.id}/seller`)
+        .then(r => r.json())
+        .then(data => { if (data.paypalEmail) setSellerPaypalEmail(data.paypalEmail) })
+        .catch(() => {})
+    }
+  }, [tab, product, sellerPaypalEmail])
 
   if (!product) return null
 
@@ -168,11 +180,11 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
         ) : robuxStep === "waiting" && robuxCode ? (
           // Robux code display
           <div className="p-6">
-            <div className="mb-4 text-center">
+            <div className="mb-5 text-center">
               <p className="text-sm text-muted-foreground mb-3">
                 Send exactly <span className="text-[#fbbf24] font-mono font-bold">R${finalRobux.toLocaleString()}</span> Robux in-game and enter this code:
               </p>
-              <div className="flex items-center gap-2 bg-[oklch(0.06_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm p-3">
+              <div className="flex items-center gap-2 bg-[oklch(0.06_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm p-3 mb-2">
                 <span className="flex-1 font-mono text-2xl tracking-[0.3em] text-foreground text-center">
                   {robuxCode}
                 </span>
@@ -180,10 +192,19 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
                   {copied ? <Check className="w-4 h-4 text-[#67e8f9]" /> : <Copy className="w-4 h-4 text-muted-foreground" />}
                 </button>
               </div>
-              <p className="text-xs text-muted-foreground/60 mt-2 font-mono">
+              <p className="text-xs text-muted-foreground/60 font-mono">
                 Code expires in 30 minutes. After payment, visit My Purchases.
               </p>
             </div>
+            <a
+              href="https://www.roblox.com/games/91093048274812/Payment-Hub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-2.5 mb-2 bg-[#fbbf24] hover:bg-[#f59e0b] text-black font-mono text-sm font-bold rounded-sm transition-colors flex items-center justify-center gap-2"
+            >
+              <RobuxIcon size={16} />
+              Open Payment Hub in Roblox
+            </a>
             <button onClick={onClose} className="w-full py-2 bg-[oklch(0.14_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm text-sm font-mono hover:bg-[oklch(0.18_0.008_260)] transition-colors">
               Got it
             </button>
@@ -242,12 +263,27 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
               )}
             </div>
 
-            {/* PayPal tab: instruction */}
+            {/* PayPal tab: seller email + instruction */}
             {tab === "paypal" && (
-              <div className="mb-4">
-                <p className="text-xs text-muted-foreground mb-2">
-                  Send <span className="text-[#67e8f9] font-mono">${typeof finalPaypal === "number" ? finalPaypal.toFixed(2) : "—"} USD</span> to the seller's PayPal, then paste your transaction ID below.
-                </p>
+              <div className="mb-4 space-y-3">
+                {sellerPaypalEmail ? (
+                  <div className="p-3 bg-[oklch(0.07_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm">
+                    <p className="text-xs text-muted-foreground font-mono mb-1">Send payment to:</p>
+                    <div className="flex items-center gap-2">
+                      <span className="flex-1 font-mono text-sm text-[#67e8f9]">{sellerPaypalEmail}</span>
+                      <button
+                        onClick={() => navigator.clipboard.writeText(sellerPaypalEmail)}
+                        className="p-1.5 hover:bg-[oklch(0.14_0.008_260)] rounded-sm transition-colors"
+                      >
+                        <Copy className="w-3.5 h-3.5 text-muted-foreground" />
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <p className="text-xs text-muted-foreground/60 font-mono">
+                    Send <span className="text-[#67e8f9]">${typeof finalPaypal === "number" ? finalPaypal.toFixed(2) : "—"} USD</span> to the seller&apos;s PayPal, then paste your transaction ID below.
+                  </p>
+                )}
                 <input
                   type="text"
                   value={paypalTxId}
