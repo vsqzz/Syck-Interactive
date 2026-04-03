@@ -557,8 +557,9 @@
     "buyerDiscordId": "765605687690133576",
     "buyerUsername": "der",
     "robuxPrice": 350,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T22:14:12.389Z",
-    "createdAt": "2026-04-03T21:44:12.389Z"
+    "createdAt": "2026-04-03T21:44:12.389Z",
+    "completedAt": "2026-04-03T21:45:11.823Z"
   }
 ]
