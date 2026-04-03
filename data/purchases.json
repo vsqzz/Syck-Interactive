@@ -496,8 +496,9 @@
     "buyerDiscordId": "1374344252502442105",
     "buyerUsername": "Xeret",
     "robuxPrice": 350,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T18:09:22.597Z",
-    "createdAt": "2026-04-03T17:39:22.597Z"
+    "createdAt": "2026-04-03T17:39:22.597Z",
+    "completedAt": "2026-04-03T17:40:32.979Z"
   }
 ]
