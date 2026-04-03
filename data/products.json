@@ -550,7 +550,7 @@
     "id": "anime-tower-defense-lobby-map-r8hrqp",
     "name": "Anime Tower Defense Lobby map",
     "description": "Only the map(High Quality)\n",
-    "category": "Models",
+    "category": "Maps",
     "fileType": ".rbxm",
     "features": [
       "Only a lobby map",
@@ -574,7 +574,7 @@
     "id": "clothing-store-map-outfit-game-hz5fa7",
     "name": "Clothing Store Map Outfit Game",
     "description": "This is a map only, meant for outfit games where u can sell UGC and clothing.\n\nPlease watch the video to see more of the map.",
-    "category": "Models",
+    "category": "Maps",
     "fileType": ".rbxm",
     "features": [
       "PBR textures",
@@ -596,5 +596,41 @@
     "salePercent": 40,
     "active": true,
     "createdAt": "2026-04-02T11:08:13.561Z"
+  },
+  {
+    "id": "custom-chat-frkblj",
+    "name": "Custom Chat",
+    "description": "Custom Chat System for Roblox with Local Chat Logic (Proximity-Based), Server Chat, and Cross-Server Chat. User/Admin Commands such as Mute, Ban, Among Other Things.",
+    "category": "Free",
+    "fileType": ".rbxm",
+    "features": [],
+    "robuxPrice": 0,
+    "paypalPrice": 0,
+    "mainImage": "https://i.imgur.com/P9QDee0.png",
+    "galleryImages": [],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/1jDBfBUkVCKBYhnsUIyzo8zmtbfm_vp5D/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-02T23:47:02.953Z"
+  },
+  {
+    "id": "usp-s-cs2-model-ookdie",
+    "name": "usp-s CS2 model",
+    "description": "You'll get the blender file aswell as the .glb(glb can be imported straight into roblox.) and recieve the textures\n\nThis model is not from me(not paid).\n\nThis model was made for unity/unreal engine, I only converted and cut each peace into their own.\n\nFor example:\nthe entire gun was 1 model\nI cut the silencer to be 1\nI cut the magazine to be 1\nand so on",
+    "category": "Free",
+    "fileType": "other",
+    "features": [],
+    "robuxPrice": 0,
+    "paypalPrice": 0,
+    "mainImage": "https://i.imgur.com/JEzer6L.png",
+    "galleryImages": [],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/1G0k9Hw0lBDOWy4kHCaoF64JQFI5-5VMQ/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-03T00:05:34.992Z"
   }
 ]
