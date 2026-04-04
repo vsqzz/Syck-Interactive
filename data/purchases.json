@@ -837,8 +837,9 @@
     "buyerDiscordId": "1412821658766413896",
     "buyerUsername": "Kenny🔥👀",
     "robuxPrice": 150,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T18:42:55.798Z",
-    "createdAt": "2026-04-04T18:12:55.798Z"
+    "createdAt": "2026-04-04T18:12:55.798Z",
+    "completedAt": "2026-04-04T18:13:31.637Z"
   }
 ]
