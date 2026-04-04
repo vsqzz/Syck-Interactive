@@ -411,8 +411,9 @@
     "buyerDiscordId": "1412821658766413896",
     "productId": "red-x-black-katana-uilxz4",
     "purchaseId": "c4ijx0FENrbTbZI6crZDk",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-04T18:13:32.062Z"
+    "createdAt": "2026-04-04T18:13:32.062Z",
+    "lastDownloadAt": "2026-04-04T18:14:09.351Z"
   }
 ]
