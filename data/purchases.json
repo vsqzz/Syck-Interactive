@@ -5,7 +5,7 @@
     "productId": "bmw-m3-g81-touring-i0sdip",
     "productName": "BMW M3 G81 Touring",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 200,
     "status": "completed",
     "expiresAt": "2026-04-02T10:00:12.420Z",
@@ -18,7 +18,7 @@
     "productId": "lamborghini-aventador-tdtndv",
     "productName": "Lamborghini Aventador",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 300,
     "status": "pending",
     "expiresAt": "2026-04-02T10:12:32.473Z",
@@ -30,7 +30,7 @@
     "productId": "lamborghini-aventador-tdtndv",
     "productName": "Lamborghini Aventador",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 300,
     "status": "pending",
     "expiresAt": "2026-04-02T10:20:58.042Z",
@@ -82,9 +82,10 @@
     "buyerDiscordId": "764512814328446997",
     "buyerUsername": "! Beanie Cat",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-02T14:31:19.309Z",
-    "createdAt": "2026-04-02T14:01:19.309Z"
+    "createdAt": "2026-04-02T14:01:19.309Z",
+    "completedAt": "2026-04-05T14:18:34.724808Z"
   },
   {
     "id": "41mMINVzpgAt6VtSY3r6R",
@@ -94,9 +95,10 @@
     "buyerDiscordId": "1488939019172839646",
     "buyerUsername": "Curve",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-02T15:37:17.410Z",
-    "createdAt": "2026-04-02T15:07:17.410Z"
+    "createdAt": "2026-04-02T15:07:17.410Z",
+    "completedAt": "2026-04-05T14:18:34.724828Z"
   },
   {
     "id": "ci4SsHEbXyZOBKUBIYl9I",
@@ -106,9 +108,10 @@
     "buyerDiscordId": "1488939019172839646",
     "buyerUsername": "Curve",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-02T15:37:25.709Z",
-    "createdAt": "2026-04-02T15:07:25.709Z"
+    "createdAt": "2026-04-02T15:07:25.709Z",
+    "completedAt": "2026-04-05T14:18:34.724830Z"
   },
   {
     "id": "To2HNgmHy6TZ7QkARTHoe",
@@ -118,9 +121,10 @@
     "buyerDiscordId": "1488939019172839646",
     "buyerUsername": "Curve",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-02T15:38:22.215Z",
-    "createdAt": "2026-04-02T15:08:22.215Z"
+    "createdAt": "2026-04-02T15:08:22.215Z",
+    "completedAt": "2026-04-05T14:18:34.724832Z"
   },
   {
     "id": "Fb2ichMyQwupXLyYmjDTb",
@@ -167,9 +171,10 @@
     "buyerDiscordId": "1453051335246348443",
     "buyerUsername": "Novairplays.",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-02T18:21:49.521Z",
-    "createdAt": "2026-04-02T17:51:49.521Z"
+    "createdAt": "2026-04-02T17:51:49.521Z",
+    "completedAt": "2026-04-05T14:18:34.724833Z"
   },
   {
     "id": "L2CZk28oG2cJRaDauGNIj",
@@ -205,9 +210,10 @@
     "buyerDiscordId": "955518641552642058",
     "buyerUsername": "joel1351",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-02T23:13:11.436Z",
-    "createdAt": "2026-04-02T22:43:11.436Z"
+    "createdAt": "2026-04-02T22:43:11.436Z",
+    "completedAt": "2026-04-05T14:18:34.724835Z"
   },
   {
     "id": "q55z6jS2SQwYCJkIjkWn7",
@@ -217,9 +223,10 @@
     "buyerDiscordId": "955518641552642058",
     "buyerUsername": "joel1351",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-02T23:16:48.241Z",
-    "createdAt": "2026-04-02T22:46:48.241Z"
+    "createdAt": "2026-04-02T22:46:48.241Z",
+    "completedAt": "2026-04-05T14:18:34.724837Z"
   },
   {
     "id": "VPG1uFZvMV6WR4rG4rfo8",
@@ -242,9 +249,10 @@
     "buyerDiscordId": "955518641552642058",
     "buyerUsername": "joel1351",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-02T23:22:57.847Z",
-    "createdAt": "2026-04-02T22:52:57.847Z"
+    "createdAt": "2026-04-02T22:52:57.847Z",
+    "completedAt": "2026-04-05T14:18:34.724838Z"
   },
   {
     "id": "O8dsXjJ5zIJcOgEeCt4c4",
@@ -252,11 +260,12 @@
     "productId": "advanced-day-and-night-cycle-fzacws",
     "productName": "Advanced Day and Night Cycle",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-02T23:27:52.991Z",
-    "createdAt": "2026-04-02T22:57:52.991Z"
+    "createdAt": "2026-04-02T22:57:52.991Z",
+    "completedAt": "2026-04-05T14:18:34.724840Z"
   },
   {
     "id": "Cd3mRJ77JzlDmwHZ8CJHc",
@@ -264,11 +273,12 @@
     "productId": "advanced-day-and-night-cycle-fzacws",
     "productName": "Advanced Day and Night Cycle",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-02T23:28:13.240Z",
-    "createdAt": "2026-04-02T22:58:13.240Z"
+    "createdAt": "2026-04-02T22:58:13.240Z",
+    "completedAt": "2026-04-05T14:18:34.724842Z"
   },
   {
     "id": "lB4yJePvP6DSeqSoAEjPD",
@@ -276,7 +286,7 @@
     "productId": "bmw-m3-g81-touring-i0sdip",
     "productName": "BMW M3 G81 Touring",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 200,
     "status": "pending",
     "expiresAt": "2026-04-02T23:58:25.858Z",
@@ -288,7 +298,7 @@
     "productId": "bmw-m3-g81-touring-i0sdip",
     "productName": "BMW M3 G81 Touring",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 200,
     "status": "pending",
     "expiresAt": "2026-04-03T00:04:49.708Z",
@@ -300,7 +310,7 @@
     "productId": "main-menu-system-0j3cly",
     "productName": "Main Menu System",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 500,
     "status": "pending",
     "expiresAt": "2026-04-03T00:05:23.841Z",
@@ -312,7 +322,7 @@
     "productId": "bmw-m3-g81-touring-i0sdip",
     "productName": "BMW M3 G81 Touring",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 200,
     "status": "pending",
     "expiresAt": "2026-04-03T00:07:28.419Z",
@@ -324,11 +334,12 @@
     "productId": "usp-s-cs2-model-ookdie",
     "productName": "usp-s CS2 model",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T00:37:12.090Z",
-    "createdAt": "2026-04-03T00:07:12.090Z"
+    "createdAt": "2026-04-03T00:07:12.090Z",
+    "completedAt": "2026-04-05T14:18:34.724843Z"
   },
   {
     "id": "IC6pArH9HwjduWQD1XSqZ",
@@ -336,11 +347,12 @@
     "productId": "usp-s-cs2-model-ookdie",
     "productName": "usp-s CS2 model",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T00:37:17.838Z",
-    "createdAt": "2026-04-03T00:07:17.838Z"
+    "createdAt": "2026-04-03T00:07:17.838Z",
+    "completedAt": "2026-04-05T14:18:34.724844Z"
   },
   {
     "id": "mMcHPPj8wOUjWV2LTe3Yb",
@@ -348,11 +360,12 @@
     "productId": "usp-s-cs2-model-ookdie",
     "productName": "usp-s CS2 model",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T00:38:05.224Z",
-    "createdAt": "2026-04-03T00:08:05.224Z"
+    "createdAt": "2026-04-03T00:08:05.224Z",
+    "completedAt": "2026-04-05T14:18:34.724845Z"
   },
   {
     "id": "V2kLFwCPU616Z43LYPao7",
@@ -375,9 +388,10 @@
     "buyerDiscordId": "936128519753302026",
     "buyerUsername": "Kzyr",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T02:04:26.666Z",
-    "createdAt": "2026-04-03T01:34:26.666Z"
+    "createdAt": "2026-04-03T01:34:26.666Z",
+    "completedAt": "2026-04-05T14:18:34.724846Z"
   },
   {
     "id": "ood3OIC6iOZVOSAOA5rky",
@@ -385,11 +399,12 @@
     "productId": "dug-o3zrdq",
     "productName": "DUG",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T07:13:48.853Z",
-    "createdAt": "2026-04-03T06:43:48.853Z"
+    "createdAt": "2026-04-03T06:43:48.853Z",
+    "completedAt": "2026-04-05T14:18:34.724847Z"
   },
   {
     "id": "Q7C6kJyq8BjrsZqxnZMv7",
@@ -399,9 +414,10 @@
     "buyerDiscordId": "1284868445208313911",
     "buyerUsername": "kiklop",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T11:36:27.938Z",
-    "createdAt": "2026-04-03T11:06:27.938Z"
+    "createdAt": "2026-04-03T11:06:27.938Z",
+    "completedAt": "2026-04-05T14:18:34.724848Z"
   },
   {
     "id": "ID2QjKqD7WXNEIX47vghc",
@@ -411,9 +427,10 @@
     "buyerDiscordId": "539067469818626070",
     "buyerUsername": "Chi",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T11:39:30.930Z",
-    "createdAt": "2026-04-03T11:09:30.930Z"
+    "createdAt": "2026-04-03T11:09:30.930Z",
+    "completedAt": "2026-04-05T14:18:34.724849Z"
   },
   {
     "id": "DWZbY6kbKIJB0nAjldjoT",
@@ -423,9 +440,10 @@
     "buyerDiscordId": "539067469818626070",
     "buyerUsername": "Chi",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T11:40:02.069Z",
-    "createdAt": "2026-04-03T11:10:02.069Z"
+    "createdAt": "2026-04-03T11:10:02.069Z",
+    "completedAt": "2026-04-05T14:18:34.724850Z"
   },
   {
     "id": "i0REiZaaqvkAbOSAHb161",
@@ -435,9 +453,10 @@
     "buyerDiscordId": "539067469818626070",
     "buyerUsername": "Chi",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T11:40:23.086Z",
-    "createdAt": "2026-04-03T11:10:23.086Z"
+    "createdAt": "2026-04-03T11:10:23.086Z",
+    "completedAt": "2026-04-05T14:18:34.724852Z"
   },
   {
     "id": "zRN2x1gh1TPsV0PAs7ijE",
@@ -460,9 +479,10 @@
     "buyerDiscordId": "539067469818626070",
     "buyerUsername": "Chi",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T12:52:08.258Z",
-    "createdAt": "2026-04-03T12:22:08.258Z"
+    "createdAt": "2026-04-03T12:22:08.258Z",
+    "completedAt": "2026-04-05T14:18:34.724853Z"
   },
   {
     "id": "FLa06G6SLgx6H7SO0Q9di",
@@ -472,9 +492,10 @@
     "buyerDiscordId": "764512814328446997",
     "buyerUsername": "! Beanie Cat",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T15:37:20.917Z",
-    "createdAt": "2026-04-03T15:07:20.917Z"
+    "createdAt": "2026-04-03T15:07:20.917Z",
+    "completedAt": "2026-04-05T14:18:34.724854Z"
   },
   {
     "id": "QlTih4edtJoOLR8R9j0o0",
@@ -484,9 +505,10 @@
     "buyerDiscordId": "764512814328446997",
     "buyerUsername": "! Beanie Cat",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T15:37:59.541Z",
-    "createdAt": "2026-04-03T15:07:59.542Z"
+    "createdAt": "2026-04-03T15:07:59.542Z",
+    "completedAt": "2026-04-05T14:18:34.724855Z"
   },
   {
     "id": "dgNQVrxtYe2sN20lNLNpJ",
@@ -509,9 +531,10 @@
     "buyerDiscordId": "1202708857776767006",
     "buyerUsername": "Sky",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T19:27:38.080Z",
-    "createdAt": "2026-04-03T18:57:38.080Z"
+    "createdAt": "2026-04-03T18:57:38.080Z",
+    "completedAt": "2026-04-05T14:18:34.724856Z"
   },
   {
     "id": "wMXx7ELZshnIm0CJwOzap",
@@ -521,9 +544,10 @@
     "buyerDiscordId": "1202708857776767006",
     "buyerUsername": "Sky",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T19:27:54.388Z",
-    "createdAt": "2026-04-03T18:57:54.388Z"
+    "createdAt": "2026-04-03T18:57:54.388Z",
+    "completedAt": "2026-04-05T14:18:34.724857Z"
   },
   {
     "id": "q0eTvZzZvELVvMhmQGE22",
@@ -533,9 +557,10 @@
     "buyerDiscordId": "1223254179200630904",
     "buyerUsername": "FlavioArts360",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T19:55:29.545Z",
-    "createdAt": "2026-04-03T19:25:29.545Z"
+    "createdAt": "2026-04-03T19:25:29.545Z",
+    "completedAt": "2026-04-05T14:18:34.724858Z"
   },
   {
     "id": "HM9PaT9GcZ8679z2DmRJd",
@@ -545,9 +570,10 @@
     "buyerDiscordId": "1223254179200630904",
     "buyerUsername": "FlavioArts360",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-03T19:56:11.882Z",
-    "createdAt": "2026-04-03T19:26:11.882Z"
+    "createdAt": "2026-04-03T19:26:11.882Z",
+    "completedAt": "2026-04-05T14:18:34.724859Z"
   },
   {
     "id": "svUpPMhb4tijtMccWIPse",
@@ -583,9 +609,10 @@
     "buyerDiscordId": "734260986525253674",
     "buyerUsername": "Kotaro",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T01:04:27.922Z",
-    "createdAt": "2026-04-04T00:34:27.922Z"
+    "createdAt": "2026-04-04T00:34:27.922Z",
+    "completedAt": "2026-04-05T14:18:34.724860Z"
   },
   {
     "id": "YjmUTnmnM4Egf5dzC7jOv",
@@ -595,9 +622,10 @@
     "buyerDiscordId": "734260986525253674",
     "buyerUsername": "Kotaro",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T01:04:42.307Z",
-    "createdAt": "2026-04-04T00:34:42.307Z"
+    "createdAt": "2026-04-04T00:34:42.307Z",
+    "completedAt": "2026-04-05T14:18:34.724861Z"
   },
   {
     "id": "m2d58Y0Oss4KSueIZlW16",
@@ -607,9 +635,10 @@
     "buyerDiscordId": "734260986525253674",
     "buyerUsername": "Kotaro",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T01:05:38.043Z",
-    "createdAt": "2026-04-04T00:35:38.043Z"
+    "createdAt": "2026-04-04T00:35:38.043Z",
+    "completedAt": "2026-04-05T14:18:34.724863Z"
   },
   {
     "id": "3fHmfGLd136EKkQOhMsUJ",
@@ -619,9 +648,10 @@
     "buyerDiscordId": "1453051335246348443",
     "buyerUsername": "Novairplays.",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T05:55:04.933Z",
-    "createdAt": "2026-04-04T05:25:04.933Z"
+    "createdAt": "2026-04-04T05:25:04.933Z",
+    "completedAt": "2026-04-05T14:18:34.724864Z"
   },
   {
     "id": "Ve5uC1BJhO5SkcES1iGDr",
@@ -631,9 +661,10 @@
     "buyerDiscordId": "1453051335246348443",
     "buyerUsername": "Novairplays.",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T05:55:26.411Z",
-    "createdAt": "2026-04-04T05:25:26.411Z"
+    "createdAt": "2026-04-04T05:25:26.411Z",
+    "completedAt": "2026-04-05T14:18:34.724865Z"
   },
   {
     "id": "wD3klr5gprMEr8abQ8bBT",
@@ -643,9 +674,10 @@
     "buyerDiscordId": "1453051335246348443",
     "buyerUsername": "Novairplays.",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T05:55:44.605Z",
-    "createdAt": "2026-04-04T05:25:44.605Z"
+    "createdAt": "2026-04-04T05:25:44.605Z",
+    "completedAt": "2026-04-05T14:18:34.724866Z"
   },
   {
     "id": "qi2a7nmSWChACMJJYx6da",
@@ -655,9 +687,10 @@
     "buyerDiscordId": "1453051335246348443",
     "buyerUsername": "Novairplays.",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T05:57:32.775Z",
-    "createdAt": "2026-04-04T05:27:32.775Z"
+    "createdAt": "2026-04-04T05:27:32.775Z",
+    "completedAt": "2026-04-05T14:18:34.724867Z"
   },
   {
     "id": "SWZU8tIGoAcTi8SBTEBSa",
@@ -667,9 +700,10 @@
     "buyerDiscordId": "1453051335246348443",
     "buyerUsername": "Novairplays.",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T05:57:54.815Z",
-    "createdAt": "2026-04-04T05:27:54.815Z"
+    "createdAt": "2026-04-04T05:27:54.815Z",
+    "completedAt": "2026-04-05T14:18:34.724868Z"
   },
   {
     "id": "ZbGmlozZsEM1V6L8pWdrI",
@@ -679,9 +713,10 @@
     "buyerDiscordId": "936128519753302026",
     "buyerUsername": "Kzyr",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T10:09:42.637Z",
-    "createdAt": "2026-04-04T09:39:42.637Z"
+    "createdAt": "2026-04-04T09:39:42.637Z",
+    "completedAt": "2026-04-05T14:18:34.724869Z"
   },
   {
     "id": "SpAQbqk5fZUxwGSmJbv1c",
@@ -691,9 +726,10 @@
     "buyerDiscordId": "936128519753302026",
     "buyerUsername": "Kzyr",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T10:37:03.402Z",
-    "createdAt": "2026-04-04T10:07:03.402Z"
+    "createdAt": "2026-04-04T10:07:03.402Z",
+    "completedAt": "2026-04-05T14:18:34.724870Z"
   },
   {
     "id": "qhUhi9Bat8IXR3XKgz6bE",
@@ -701,11 +737,12 @@
     "productId": "anounce-command-em751a",
     "productName": "ANOUNCE COMMAND",
     "buyerDiscordId": "1483230142091497604",
-    "buyerUsername": "мама извини  я sendai",
+    "buyerUsername": "\u043c\u0430\u043c\u0430 \u0438\u0437\u0432\u0438\u043d\u0438  \u044f sendai",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T17:12:23.080Z",
-    "createdAt": "2026-04-04T16:42:23.080Z"
+    "createdAt": "2026-04-04T16:42:23.080Z",
+    "completedAt": "2026-04-05T14:18:34.724871Z"
   },
   {
     "id": "n3BewhGaOrdlbuPb9MjhQ",
@@ -713,7 +750,7 @@
     "productId": "3d-model-capes-ll1dkh",
     "productName": "3D Model Capes",
     "buyerDiscordId": "1483230142091497604",
-    "buyerUsername": "мама извини  я sendai",
+    "buyerUsername": "\u043c\u0430\u043c\u0430 \u0438\u0437\u0432\u0438\u043d\u0438  \u044f sendai",
     "robuxPrice": 500,
     "status": "pending",
     "expiresAt": "2026-04-04T17:15:31.276Z",
@@ -725,7 +762,7 @@
     "productId": "3d-model-capes-ll1dkh",
     "productName": "3D Model Capes",
     "buyerDiscordId": "1483230142091497604",
-    "buyerUsername": "мама извини  я sendai",
+    "buyerUsername": "\u043c\u0430\u043c\u0430 \u0438\u0437\u0432\u0438\u043d\u0438  \u044f sendai",
     "robuxPrice": 500,
     "status": "completed",
     "expiresAt": "2026-04-04T17:19:18.293Z",
@@ -740,9 +777,10 @@
     "buyerDiscordId": "1426535627264098459",
     "buyerUsername": "Hmm!",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T17:25:48.621Z",
-    "createdAt": "2026-04-04T16:55:48.621Z"
+    "createdAt": "2026-04-04T16:55:48.621Z",
+    "completedAt": "2026-04-05T14:18:34.724872Z"
   },
   {
     "id": "eD1WYZQiXyzRKvDE6sOd4",
@@ -752,9 +790,10 @@
     "buyerDiscordId": "1426535627264098459",
     "buyerUsername": "Hmm!",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T17:26:26.344Z",
-    "createdAt": "2026-04-04T16:56:26.344Z"
+    "createdAt": "2026-04-04T16:56:26.344Z",
+    "completedAt": "2026-04-05T14:18:34.724874Z"
   },
   {
     "id": "Wnpmii5E7n8wruxwA7GSo",
@@ -764,9 +803,10 @@
     "buyerDiscordId": "1426535627264098459",
     "buyerUsername": "Hmm!",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T17:27:40.191Z",
-    "createdAt": "2026-04-04T16:57:40.191Z"
+    "createdAt": "2026-04-04T16:57:40.191Z",
+    "completedAt": "2026-04-05T14:18:34.724875Z"
   },
   {
     "id": "ap6fNoyRaOo8eFyD2uGY3",
@@ -776,9 +816,10 @@
     "buyerDiscordId": "1426535627264098459",
     "buyerUsername": "Hmm!",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T17:30:58.686Z",
-    "createdAt": "2026-04-04T17:00:58.686Z"
+    "createdAt": "2026-04-04T17:00:58.686Z",
+    "completedAt": "2026-04-05T14:18:34.724876Z"
   },
   {
     "id": "XjPBPD6JevR6UsIkgDJmE",
@@ -788,9 +829,10 @@
     "buyerDiscordId": "1426535627264098459",
     "buyerUsername": "Hmm!",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T17:34:09.972Z",
-    "createdAt": "2026-04-04T17:04:09.972Z"
+    "createdAt": "2026-04-04T17:04:09.972Z",
+    "completedAt": "2026-04-05T14:18:34.724877Z"
   },
   {
     "id": "rZKiRgZq2dGyEx5QTVPwJ",
@@ -800,9 +842,10 @@
     "buyerDiscordId": "1426535627264098459",
     "buyerUsername": "Hmm!",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T17:38:49.305Z",
-    "createdAt": "2026-04-04T17:08:49.305Z"
+    "createdAt": "2026-04-04T17:08:49.305Z",
+    "completedAt": "2026-04-05T14:18:34.724878Z"
   },
   {
     "id": "xhljwlCreDrulNiIPsdGw",
@@ -810,7 +853,7 @@
     "productId": "3d-model-capes-ll1dkh",
     "productName": "3D Model Capes",
     "buyerDiscordId": "1412821658766413896",
-    "buyerUsername": "Kenny🔥👀",
+    "buyerUsername": "Kenny\ud83d\udd25\ud83d\udc40",
     "robuxPrice": 500,
     "status": "completed",
     "expiresAt": "2026-04-04T18:29:50.021Z",
@@ -823,11 +866,12 @@
     "productId": "dug-o3zrdq",
     "productName": "DUG",
     "buyerDiscordId": "1412821658766413896",
-    "buyerUsername": "Kenny🔥👀",
+    "buyerUsername": "Kenny\ud83d\udd25\ud83d\udc40",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T18:38:13.297Z",
-    "createdAt": "2026-04-04T18:08:13.297Z"
+    "createdAt": "2026-04-04T18:08:13.297Z",
+    "completedAt": "2026-04-05T14:18:34.724879Z"
   },
   {
     "id": "c4ijx0FENrbTbZI6crZDk",
@@ -835,7 +879,7 @@
     "productId": "red-x-black-katana-uilxz4",
     "productName": "Red x Black Katana",
     "buyerDiscordId": "1412821658766413896",
-    "buyerUsername": "Kenny🔥👀",
+    "buyerUsername": "Kenny\ud83d\udd25\ud83d\udc40",
     "robuxPrice": 150,
     "status": "completed",
     "expiresAt": "2026-04-04T18:42:55.798Z",
@@ -862,9 +906,10 @@
     "buyerDiscordId": "1292214319030861901",
     "buyerUsername": "Jttski",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T18:59:41.703Z",
-    "createdAt": "2026-04-04T18:29:41.703Z"
+    "createdAt": "2026-04-04T18:29:41.703Z",
+    "completedAt": "2026-04-05T14:18:34.724880Z"
   },
   {
     "id": "hpLyXYTrZapimQgjMIJst",
@@ -874,9 +919,10 @@
     "buyerDiscordId": "1292214319030861901",
     "buyerUsername": "Jttski",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T19:00:10.855Z",
-    "createdAt": "2026-04-04T18:30:10.855Z"
+    "createdAt": "2026-04-04T18:30:10.855Z",
+    "completedAt": "2026-04-05T14:18:34.724881Z"
   },
   {
     "id": "piycWnUyMngxIy2ea4SxB",
@@ -886,9 +932,10 @@
     "buyerDiscordId": "1292214319030861901",
     "buyerUsername": "Jttski",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T19:01:17.245Z",
-    "createdAt": "2026-04-04T18:31:17.245Z"
+    "createdAt": "2026-04-04T18:31:17.245Z",
+    "completedAt": "2026-04-05T14:18:34.724882Z"
   },
   {
     "id": "2K7jKNAXGDEank48seVea",
@@ -908,11 +955,12 @@
     "productId": "custom-chat-frkblj",
     "productName": "Custom Chat",
     "buyerDiscordId": "1219653070581928036",
-    "buyerUsername": "Zyless..⁈⁘",
+    "buyerUsername": "Zyless..\u2048\u2058",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T20:08:49.018Z",
-    "createdAt": "2026-04-04T19:38:49.018Z"
+    "createdAt": "2026-04-04T19:38:49.018Z",
+    "completedAt": "2026-04-05T14:18:34.724883Z"
   },
   {
     "id": "yC53FIcCGbiQ7wWl1dJME",
@@ -920,11 +968,12 @@
     "productId": "custom-chat-frkblj",
     "productName": "Custom Chat",
     "buyerDiscordId": "1219653070581928036",
-    "buyerUsername": "Zyless..⁈⁘",
+    "buyerUsername": "Zyless..\u2048\u2058",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-04T20:09:08.468Z",
-    "createdAt": "2026-04-04T19:39:08.468Z"
+    "createdAt": "2026-04-04T19:39:08.468Z",
+    "completedAt": "2026-04-05T14:18:34.724885Z"
   },
   {
     "id": "mVLzbxkpybu6kwF0jNQm7",
@@ -934,9 +983,10 @@
     "buyerDiscordId": "889197936301465661",
     "buyerUsername": "Code",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T03:29:48.156Z",
-    "createdAt": "2026-04-05T02:59:48.156Z"
+    "createdAt": "2026-04-05T02:59:48.156Z",
+    "completedAt": "2026-04-05T14:18:34.724886Z"
   },
   {
     "id": "u4mGiqhVQVCj5n6RSrbvk",
@@ -946,9 +996,10 @@
     "buyerDiscordId": "889197936301465661",
     "buyerUsername": "Code",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T03:30:08.984Z",
-    "createdAt": "2026-04-05T03:00:08.984Z"
+    "createdAt": "2026-04-05T03:00:08.984Z",
+    "completedAt": "2026-04-05T14:18:34.724887Z"
   },
   {
     "id": "Q6RD4OJV14vm9AdUP3aoQ",
@@ -958,9 +1009,10 @@
     "buyerDiscordId": "889197936301465661",
     "buyerUsername": "Code",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T03:30:14.939Z",
-    "createdAt": "2026-04-05T03:00:14.939Z"
+    "createdAt": "2026-04-05T03:00:14.939Z",
+    "completedAt": "2026-04-05T14:18:34.724888Z"
   },
   {
     "id": "xGfOlVGKBHontfoYgP4WX",
@@ -970,9 +1022,10 @@
     "buyerDiscordId": "889197936301465661",
     "buyerUsername": "Code",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T03:30:19.798Z",
-    "createdAt": "2026-04-05T03:00:19.798Z"
+    "createdAt": "2026-04-05T03:00:19.798Z",
+    "completedAt": "2026-04-05T14:18:34.724889Z"
   },
   {
     "id": "BHNZDgap1sho0CP9QeZ7v",
@@ -982,9 +1035,10 @@
     "buyerDiscordId": "889197936301465661",
     "buyerUsername": "Code",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T03:30:25.443Z",
-    "createdAt": "2026-04-05T03:00:25.443Z"
+    "createdAt": "2026-04-05T03:00:25.443Z",
+    "completedAt": "2026-04-05T14:18:34.724890Z"
   },
   {
     "id": "9EbHOK4S4VepSUwaHSIzO",
@@ -994,9 +1048,10 @@
     "buyerDiscordId": "889197936301465661",
     "buyerUsername": "Code",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T03:30:32.565Z",
-    "createdAt": "2026-04-05T03:00:32.565Z"
+    "createdAt": "2026-04-05T03:00:32.565Z",
+    "completedAt": "2026-04-05T14:18:34.724891Z"
   },
   {
     "id": "BHLSbDtCBwftqJD0ExUVX",
@@ -1006,9 +1061,10 @@
     "buyerDiscordId": "889197936301465661",
     "buyerUsername": "Code",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T03:31:26.983Z",
-    "createdAt": "2026-04-05T03:01:26.983Z"
+    "createdAt": "2026-04-05T03:01:26.983Z",
+    "completedAt": "2026-04-05T14:18:34.724892Z"
   },
   {
     "id": "zuTDPGlvNm7fzHAnwq7yz",
@@ -1018,9 +1074,10 @@
     "buyerDiscordId": "1310404471494283381",
     "buyerUsername": "John Grace",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T04:53:05.845Z",
-    "createdAt": "2026-04-05T04:23:05.846Z"
+    "createdAt": "2026-04-05T04:23:05.846Z",
+    "completedAt": "2026-04-05T14:18:34.724893Z"
   },
   {
     "id": "i2jmR6WwzHnh326LwczuL",
@@ -1030,9 +1087,10 @@
     "buyerDiscordId": "1310404471494283381",
     "buyerUsername": "John Grace",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T04:53:19.636Z",
-    "createdAt": "2026-04-05T04:23:19.636Z"
+    "createdAt": "2026-04-05T04:23:19.636Z",
+    "completedAt": "2026-04-05T14:18:34.724895Z"
   },
   {
     "id": "R7hyurymSpjfbvzgfHmcy",
@@ -1042,9 +1100,10 @@
     "buyerDiscordId": "1310404471494283381",
     "buyerUsername": "John Grace",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T04:54:30.257Z",
-    "createdAt": "2026-04-05T04:24:30.257Z"
+    "createdAt": "2026-04-05T04:24:30.257Z",
+    "completedAt": "2026-04-05T14:18:34.724899Z"
   },
   {
     "id": "nbqshYn672acdzNxs1CaC",
@@ -1054,9 +1113,10 @@
     "buyerDiscordId": "1310404471494283381",
     "buyerUsername": "John Grace",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T04:54:53.277Z",
-    "createdAt": "2026-04-05T04:24:53.277Z"
+    "createdAt": "2026-04-05T04:24:53.277Z",
+    "completedAt": "2026-04-05T14:18:34.724900Z"
   },
   {
     "id": "xrzRbJdrOjO6vckKueUcu",
@@ -1066,9 +1126,10 @@
     "buyerDiscordId": "1189202267958673531",
     "buyerUsername": "AMPUL",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T07:44:44.698Z",
-    "createdAt": "2026-04-05T07:14:44.698Z"
+    "createdAt": "2026-04-05T07:14:44.698Z",
+    "completedAt": "2026-04-05T14:18:34.724901Z"
   },
   {
     "id": "axxG7RIXgTWmlq6Lx1ixU",
@@ -1078,9 +1139,10 @@
     "buyerDiscordId": "1189202267958673531",
     "buyerUsername": "AMPUL",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T07:45:02.238Z",
-    "createdAt": "2026-04-05T07:15:02.238Z"
+    "createdAt": "2026-04-05T07:15:02.238Z",
+    "completedAt": "2026-04-05T14:18:34.724902Z"
   },
   {
     "id": "2umSAFPhESOKu5a4UAcOL",
@@ -1090,9 +1152,10 @@
     "buyerDiscordId": "1189202267958673531",
     "buyerUsername": "AMPUL",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T07:45:26.209Z",
-    "createdAt": "2026-04-05T07:15:26.209Z"
+    "createdAt": "2026-04-05T07:15:26.209Z",
+    "completedAt": "2026-04-05T14:18:34.724903Z"
   },
   {
     "id": "Z6bVeyLgA7uR91rJF1IHE",
@@ -1102,9 +1165,10 @@
     "buyerDiscordId": "1189202267958673531",
     "buyerUsername": "AMPUL",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T07:46:21.755Z",
-    "createdAt": "2026-04-05T07:16:21.755Z"
+    "createdAt": "2026-04-05T07:16:21.755Z",
+    "completedAt": "2026-04-05T14:18:34.724904Z"
   },
   {
     "id": "l8aPTibTVAhJLeg7zI8Ax",
@@ -1114,9 +1178,10 @@
     "buyerDiscordId": "1189202267958673531",
     "buyerUsername": "AMPUL",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T07:46:37.020Z",
-    "createdAt": "2026-04-05T07:16:37.020Z"
+    "createdAt": "2026-04-05T07:16:37.020Z",
+    "completedAt": "2026-04-05T14:18:34.724905Z"
   },
   {
     "id": "Jh16pNbaw3rVx4YyaSQoP",
@@ -1137,11 +1202,12 @@
     "productId": "custom-chat-frkblj",
     "productName": "Custom Chat",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T14:46:17.625Z",
-    "createdAt": "2026-04-05T14:16:17.625Z"
+    "createdAt": "2026-04-05T14:16:17.625Z",
+    "completedAt": "2026-04-05T14:18:34.724906Z"
   },
   {
     "id": "BPR7KcXPUqm3HvzKHmt3R",
@@ -1149,10 +1215,11 @@
     "productId": "custom-chat-frkblj",
     "productName": "Custom Chat",
     "buyerDiscordId": "1303458703520825457",
-    "buyerUsername": "♰",
+    "buyerUsername": "\u2670",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T14:46:27.195Z",
-    "createdAt": "2026-04-05T14:16:27.195Z"
+    "createdAt": "2026-04-05T14:16:27.195Z",
+    "completedAt": "2026-04-05T14:18:34.724907Z"
   }
 ]
