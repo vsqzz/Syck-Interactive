@@ -1230,8 +1230,9 @@
     "buyerDiscordId": "1364387607433449585",
     "buyerUsername": "Puck",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T18:52:04.514Z",
-    "createdAt": "2026-04-05T18:22:04.514Z"
+    "createdAt": "2026-04-05T18:22:04.514Z",
+    "completedAt": "2026-04-05T18:22:05.296Z"
   }
 ]
