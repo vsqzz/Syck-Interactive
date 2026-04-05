@@ -1,6 +1,6 @@
 import { auth } from "@/auth"
 import { getProductById } from "@/lib/products"
-import { createPurchase } from "@/lib/purchases"
+import { createPurchase, completePurchase } from "@/lib/purchases"
 import { createDownloadRecord } from "@/lib/downloads"
 import { computeSalePrice } from "@/lib/utils-server"
 import { validateCoupon, useCoupon } from "@/lib/discounts"
@@ -50,7 +50,8 @@ export async function POST(req: NextRequest) {
       session.user.name ?? "Unknown",
       0
     )
-    // Mark completed right away
+    // Mark purchase as completed and create download record immediately
+    await completePurchase(purchase.id)
     await createDownloadRecord(session.user.discordId, productId, purchase.id)
 
     notifySale({
