@@ -1243,8 +1243,9 @@
     "buyerDiscordId": "1382394966579613805",
     "buyerUsername": "pechu_colombia",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-05T23:36:13.166Z",
-    "createdAt": "2026-04-05T23:06:13.166Z"
+    "createdAt": "2026-04-05T23:06:13.166Z",
+    "completedAt": "2026-04-05T23:06:13.652Z"
   }
 ]
