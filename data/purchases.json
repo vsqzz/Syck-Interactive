@@ -1045,5 +1045,17 @@
     "status": "pending",
     "expiresAt": "2026-04-05T04:54:30.257Z",
     "createdAt": "2026-04-05T04:24:30.257Z"
+  },
+  {
+    "id": "nbqshYn672acdzNxs1CaC",
+    "code": "W6MGSG",
+    "productId": "server-locator-hzakaf",
+    "productName": "Server Locator",
+    "buyerDiscordId": "1310404471494283381",
+    "buyerUsername": "John Grace",
+    "robuxPrice": 0,
+    "status": "pending",
+    "expiresAt": "2026-04-05T04:54:53.277Z",
+    "createdAt": "2026-04-05T04:24:53.277Z"
   }
 ]
