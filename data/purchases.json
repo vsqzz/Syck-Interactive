@@ -1294,8 +1294,9 @@
     "buyerDiscordId": "1434998415049359411",
     "buyerUsername": "Mercha",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-06T15:39:11.255Z",
-    "createdAt": "2026-04-06T15:09:11.255Z"
+    "createdAt": "2026-04-06T15:09:11.255Z",
+    "completedAt": "2026-04-06T15:09:11.855Z"
   }
 ]
