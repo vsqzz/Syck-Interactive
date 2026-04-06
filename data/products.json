@@ -632,5 +632,43 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-03T00:05:34.992Z"
+  },
+  {
+    "id": "project-expressway-dzhwxs",
+    "name": "Project:Expressway",
+    "description": "Fully scripted car driving, Assetto Corsa style. \nHas everything you need from cars to customization to traffic!",
+    "category": "Systems",
+    "fileType": ".rbxl",
+    "features": [
+      "Dealership",
+      "Spawner",
+      "4 Cars",
+      "Traffic",
+      "Map+roads",
+      "Customization",
+      "Menu+loading screen",
+      "Daily login",
+      "Settings",
+      "Codes",
+      "Drive to earn money",
+      "Shop+Animations"
+    ],
+    "robuxPrice": 15000,
+    "paypalPrice": 60,
+    "mainImage": "https://i.imgur.com/xIHl30q.png",
+    "galleryImages": [
+      "https://youtu.be/VsEe6ElScMI"
+    ],
+    "tags": [
+      "Scripted",
+      "map",
+      "systems",
+      "fully done"
+    ],
+    "downloadUrl": "https://drive.google.com/file/d/1_o7ARjCqxTigkzDWtxURu9npWSyJ4uD1/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-06T01:39:30.179Z"
   }
 ]
