@@ -6,8 +6,10 @@
     "paymentMethod": "robux",
     "scope": "all",
     "maxUses": null,
-    "uses": 0,
-    "usedBy": [],
+    "uses": 1,
+    "usedBy": [
+      "1303458703520825457"
+    ],
     "onePerUser": false,
     "expiresAt": "2026-04-07T23:00",
     "active": true,
