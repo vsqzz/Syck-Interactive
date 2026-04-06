@@ -1392,8 +1392,9 @@
     "buyerDiscordId": "776015729719771136",
     "buyerUsername": "𝕽𝖊𝖛𝖊𝖓𝖊𝖝𝖘✩",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-06T22:16:17.347Z",
-    "createdAt": "2026-04-06T21:46:17.347Z"
+    "createdAt": "2026-04-06T21:46:17.347Z",
+    "completedAt": "2026-04-06T21:46:17.968Z"
   }
 ]
