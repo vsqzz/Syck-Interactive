@@ -25,23 +25,23 @@ export async function getOrCreateRobloxProduct(price: number): Promise<number | 
   const cookie = process.env.ROBLOX_COOKIE
   const universeId = process.env.ROBLOX_UNIVERSE_ID
   if (!cookie || !universeId) {
-    console.warn("[robux-products] ROBLOX_COOKIE or ROBLOX_UNIVERSE_ID not set, cannot create product for price", price)
     return null
   }
 
   try {
-    // Step 1: get CSRF token (Roblox requires it for POST requests)
+    // Step 1: get CSRF token (Roblox requires it for mutating POST requests)
     const csrfRes = await fetch("https://auth.roblox.com/v2/logout", {
       method: "POST",
       headers: { Cookie: `.ROBLOSECURITY=${cookie}` },
     })
     const csrfToken = csrfRes.headers.get("x-csrf-token") ?? ""
     if (!csrfToken) {
-      console.error("[robux-products] Failed to get CSRF token")
+      console.error("[robux-products] Failed to get CSRF token, status:", csrfRes.status)
       return null
     }
 
     // Step 2: create the Developer Product
+    // Roblox develop API uses camelCase field names in request bodies
     const createRes = await fetch(
       `https://develop.roblox.com/v1/universes/${universeId}/developer-products`,
       {
@@ -52,34 +52,60 @@ export async function getOrCreateRobloxProduct(price: number): Promise<number | 
           "X-CSRF-TOKEN": csrfToken,
         },
         body: JSON.stringify({
-          Name: `Payment ${price} R$`,
-          PriceInRobux: price,
-          Description: `Syck Interactive – ${price} Robux payment`,
+          name: `Payment ${price} R$`,
+          description: `Syck Interactive – ${price} Robux payment`,
+          iconImageAssetId: 0,
         }),
       }
     )
 
     if (!createRes.ok) {
       const errText = await createRes.text()
-      console.error("[robux-products] Failed to create product:", createRes.status, errText)
+      console.error("[robux-products] Create failed:", createRes.status, errText)
       return null
     }
 
     const created = await createRes.json()
-    const newProductId: number = created.id ?? created.Id
+    // Response uses "id" (number) — fall back to checking "Id" for older API versions
+    const newProductId: number = created.id ?? created.Id ?? 0
     if (!newProductId) {
-      console.error("[robux-products] No ID in response:", created)
+      console.error("[robux-products] No ID in create response:", JSON.stringify(created))
       return null
     }
 
-    // Step 3: persist to storage
+    // Step 3: set the price on the newly created product
+    const updateRes = await fetch(
+      `https://develop.roblox.com/v1/developer-products/${newProductId}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Cookie: `.ROBLOSECURITY=${cookie}`,
+          "X-CSRF-TOKEN": csrfToken,
+        },
+        body: JSON.stringify({
+          Name: `Payment ${price} R$`,
+          Description: `Syck Interactive – ${price} Robux payment`,
+          IconImageAssetId: 0,
+          PriceInRobux: price,
+        }),
+      }
+    )
+
+    if (!updateRes.ok) {
+      const errText = await updateRes.text()
+      // Non-fatal: product exists but price might not be set; log and continue
+      console.warn("[robux-products] Price update failed:", updateRes.status, errText)
+    }
+
+    // Step 4: persist to storage
     const updated: ProductMap = { ...(map as ProductMap), [String(price)]: newProductId }
     await writeJsonFile(FILE, updated, sha)
 
-    console.log(`[robux-products] Created new product for ${price} R$: ${newProductId}`)
+    console.log(`[robux-products] Created product ${newProductId} for ${price} R$`)
     return newProductId
   } catch (err) {
-    console.error("[robux-products] Error creating product:", err)
+    console.error("[robux-products] Error:", err)
     return null
   }
 }
