@@ -41,6 +41,17 @@ export async function POST(req: NextRequest) {
     await useCoupon(couponCode, session.user.discordId)
   }
 
+  // When ROBLOX_COOKIE/ROBLOX_UNIVERSE_ID are set, validate-code auto-creates a
+  // Developer Product for the exact discounted price. Without those env vars,
+  // the Lua falls back to "nearest product above", which charges the wrong amount.
+  // Snap finalPrice DOWN to the nearest existing product price point so the game
+  // charges exactly what's stored in the purchase and the webhook check passes.
+  if (finalPrice > 0 && !(process.env.ROBLOX_COOKIE && process.env.ROBLOX_UNIVERSE_ID)) {
+    const PRODUCT_PRICE_POINTS = [5,10,20,25,30,40,50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1500,2500,3000,3500,4000,4500,5000,15000]
+    const snapped = [...PRODUCT_PRICE_POINTS].reverse().find(p => p <= finalPrice)
+    if (snapped) finalPrice = snapped
+  }
+
   // Free product — skip the payment flow entirely, grant access immediately
   if (finalPrice === 0) {
     const purchase = await createPurchase(

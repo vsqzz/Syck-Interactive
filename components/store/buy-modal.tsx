@@ -26,6 +26,7 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
   const [sellerPaypalEmail, setSellerPaypalEmail] = useState<string | null>(null)
   const [robuxStep, setRobuxStep] = useState<RobuxStep>("code")
   const [robuxCode, setRobuxCode] = useState<string | null>(null)
+  const [confirmedRobuxPrice, setConfirmedRobuxPrice] = useState<number | null>(null)
   const [purchaseId, setPurchaseId] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -40,6 +41,7 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
       setCouponResult(null)
       setError(null)
       setRobuxCode(null)
+      setConfirmedRobuxPrice(null)
       setSellerPaypalEmail(null)
     }
   }, [product])
@@ -103,6 +105,7 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
         return
       }
       setRobuxCode(data.code)
+      setConfirmedRobuxPrice(data.robuxPrice ?? null)
       setPurchaseId(data.purchaseId)
       setRobuxStep("waiting")
     } catch (e: any) {
@@ -189,7 +192,7 @@ export function BuyModal({ product, onClose }: BuyModalProps) {
           <div className="p-6">
             <div className="mb-5 text-center">
               <p className="text-sm text-muted-foreground mb-3">
-                Send exactly <span className="text-[#fbbf24] font-mono font-bold">R${finalRobux.toLocaleString()}</span> Robux in-game and enter this code:
+                Send exactly <span className="text-[#fbbf24] font-mono font-bold">R${(confirmedRobuxPrice ?? finalRobux).toLocaleString()}</span> Robux in-game and enter this code:
               </p>
               <div className="flex items-center gap-2 bg-[oklch(0.06_0.008_260)] border border-[oklch(0.18_0.008_260)] rounded-sm p-3 mb-2">
                 <span className="flex-1 font-mono text-2xl tracking-[0.3em] text-foreground text-center">
