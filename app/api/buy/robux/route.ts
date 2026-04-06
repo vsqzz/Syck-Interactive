@@ -41,15 +41,6 @@ export async function POST(req: NextRequest) {
     await useCoupon(couponCode, session.user.discordId)
   }
 
-  // Snap finalPrice down to the nearest available Roblox Developer Product price point.
-  // The Lua script rounds UP to next available product, so we must pre-snap DOWN so the
-  // game charges exactly the discounted amount rather than the original price.
-  if (finalPrice > 0) {
-    const PRODUCT_PRICE_POINTS = [5,10,20,25,30,40,50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1500,2500,3000,3500,4000,4500,5000,15000]
-    const snapped = [...PRODUCT_PRICE_POINTS].reverse().find(p => p <= finalPrice)
-    if (snapped) finalPrice = snapped
-  }
-
   // Free product — skip the payment flow entirely, grant access immediately
   if (finalPrice === 0) {
     const purchase = await createPurchase(

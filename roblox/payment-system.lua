@@ -3,19 +3,21 @@
 
     SETUP INSTRUCTIONS:
     1. Create a new Roblox game (or use existing)
-    2. Create Developer Products in Game Settings > Monetization
-       - Create products for each price point (e.g., 100 R$, 500 R$, 1000 R$)
-       - Note down the Product IDs
-    3. Add this script to ServerScriptService
-    4. Update the CONFIGURATION section below
-    5. Set ROBUX_WEBHOOK_SECRET in your Vercel environment variables
+    2. Add this script to ServerScriptService
+    3. Update the CONFIGURATION section below
+    4. Set ROBUX_WEBHOOK_SECRET in your Vercel environment variables
        (must match WEBHOOK_SECRET below exactly)
+    5. Set ROBLOX_COOKIE and ROBLOX_UNIVERSE_ID in your Vercel environment
+       variables so the server can auto-create Developer Products as needed.
 
     HOW IT WORKS:
-    1. Player buys a product on syckinteractive.com with Robux
+    1. Player buys a product on syckinteractive.com with Robux (coupon or full price)
     2. Website gives them a 6-character code (valid for 30 minutes)
     3. Player enters code in this Roblox game
     4. Game validates code against the website API
+       - The API returns the EXACT Roblox Developer Product ID to charge
+       - If the product doesn't exist yet (e.g. coupon price), the server
+         auto-creates it and returns the new ID
     5. Game prompts the Developer Product purchase for the correct amount
     6. On successful purchase, game notifies the website
     7. Website unlocks the file download in the player's account
@@ -31,8 +33,8 @@ local CONFIG = {
 	-- Webhook secret — must match ROBUX_WEBHOOK_SECRET in your Vercel env vars
 	WEBHOOK_SECRET = "Zm9ybWVyYnJpZWZub2lzZWJhbGxvb25taXh0dXJlc3RyYXd3ZXN0ZXJub25ldHJ1dGg=",
 
-	-- Developer Product IDs for each Robux price point
-	-- Create these in Game Settings > Monetization > Developer Products
+	-- Fallback local product IDs used if the API doesn't return robloxProductId.
+	-- The server now auto-creates products for any price, so this is rarely needed.
 	PRODUCT_IDS = {
 		[5] = 3537622381,
 		[10] = 3537622543,
@@ -102,6 +104,37 @@ statusRemote.Parent = remotesFolder
 local pendingPurchases = {}
 
 -- ============================================
+-- LOAD LIVE PRODUCT MAP FROM SERVER (startup)
+-- ============================================
+-- Fetches the latest price→productId mapping from the website.
+-- New products created server-side (e.g. for coupon prices) are included here.
+
+local liveProductMap = {}
+
+task.spawn(function()
+	local ok, res = pcall(function()
+		return HttpService:RequestAsync({
+			Url = CONFIG.API_BASE_URL .. "/products",
+			Method = "GET",
+		})
+	end)
+	if ok and res.StatusCode == 200 then
+		local decodeOk, data = pcall(HttpService.JSONDecode, HttpService, res.Body)
+		if decodeOk and type(data) == "table" then
+			for priceStr, productId in pairs(data) do
+				local price = tonumber(priceStr)
+				if price and productId then
+					liveProductMap[price] = productId
+				end
+			end
+			print("[SyckPayment] Loaded " .. tostring(#(function() local t={} for _ in pairs(liveProductMap) do table.insert(t,1) end return t end)()) .. " products from server")
+		end
+	else
+		warn("[SyckPayment] Could not load live product map, using local fallback")
+	end
+end)
+
+-- ============================================
 -- API FUNCTIONS
 -- ============================================
 
@@ -159,10 +192,21 @@ local function notifyPurchaseComplete(pending, player, receiptInfo)
 end
 
 -- ============================================
--- FIND CLOSEST PRODUCT ID
+-- FIND PRODUCT ID (live map → local fallback → nearest above)
 -- ============================================
 
 local function getProductIdForPrice(robuxPrice)
+	-- 1. Check live map loaded from server (includes newly created products)
+	if liveProductMap[robuxPrice] then
+		return liveProductMap[robuxPrice], robuxPrice
+	end
+
+	-- 2. Check local hardcoded table
+	if CONFIG.PRODUCT_IDS[robuxPrice] then
+		return CONFIG.PRODUCT_IDS[robuxPrice], robuxPrice
+	end
+
+	-- 3. Fallback: nearest price above in local table
 	local sortedPrices = {}
 	for price, productId in pairs(CONFIG.PRODUCT_IDS) do
 		if productId > 0 then
@@ -201,7 +245,20 @@ submitCodeRemote.OnServerInvoke = function(player, code)
 		return { success = false, message = result }
 	end
 
-	local productId, actualPrice = getProductIdForPrice(result.robuxPrice)
+	-- Prefer the robloxProductId returned directly by the server.
+	-- The server auto-creates a Developer Product for any price (including discounted),
+	-- so this will be exact. Fall back to local lookup only if the server didn't return it.
+	local productId, actualPrice
+
+	if result.robloxProductId and result.robloxProductId ~= nil then
+		productId = result.robloxProductId
+		actualPrice = result.robuxPrice
+		-- Also cache in live map for future reference
+		liveProductMap[result.robuxPrice] = result.robloxProductId
+	else
+		productId, actualPrice = getProductIdForPrice(result.robuxPrice)
+	end
+
 	if not productId then
 		return { success = false, message = "No payment product configured for this price. Contact support." }
 	end

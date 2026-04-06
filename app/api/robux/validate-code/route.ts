@@ -1,5 +1,6 @@
 import { getPurchaseByCode } from "@/lib/purchases"
 import { getProductById } from "@/lib/products"
+import { getOrCreateRobloxProduct } from "@/lib/robux-products"
 import { NextRequest, NextResponse } from "next/server"
 
 // Called by the Roblox game before prompting a Developer Product purchase.
@@ -28,11 +29,15 @@ export async function POST(req: NextRequest) {
 
   const product = await getProductById(purchase.productId)
 
+  // Get (or auto-create) the Roblox Developer Product ID for this exact price
+  const robloxProductId = await getOrCreateRobloxProduct(purchase.robuxPrice)
+
   return NextResponse.json({
     valid: true,
     productId: purchase.productId,
     productName: purchase.productName,
     robuxPrice: purchase.robuxPrice,
+    robloxProductId: robloxProductId ?? null,
     fileUrl: product?.fileUrl ?? null,
   })
 }
