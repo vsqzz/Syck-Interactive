@@ -6,8 +6,9 @@
     "paymentMethod": "robux",
     "scope": "all",
     "maxUses": null,
-    "uses": 2,
+    "uses": 3,
     "usedBy": [
+      "1303458703520825457",
       "1303458703520825457",
       "1303458703520825457"
     ],
