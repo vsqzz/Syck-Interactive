@@ -1531,8 +1531,9 @@
     "buyerDiscordId": "1364548034158919701",
     "buyerUsername": "Tiler_603",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-07T16:15:30.619Z",
-    "createdAt": "2026-04-07T15:45:30.619Z"
+    "createdAt": "2026-04-07T15:45:30.619Z",
+    "completedAt": "2026-04-07T15:45:31.260Z"
   }
 ]
