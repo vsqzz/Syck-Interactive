@@ -688,5 +688,29 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-07T14:02:06.413Z"
+  },
+  {
+    "id": "flight-system-m2gisl",
+    "name": "Flight System",
+    "description": "Fly to breakable parts in works (have to be named Parts)",
+    "category": "Systems",
+    "fileType": ".rbxl",
+    "features": [
+      "F to start flying",
+      "LeftShift To boost",
+      "LeftAlt to Shiftlock"
+    ],
+    "robuxPrice": 250,
+    "paypalPrice": 3.99,
+    "mainImage": "https://public-files.gumroad.com/dt39tbbyw4c4xfsjg6f8dblixct3",
+    "galleryImages": [
+      "https://youtu.be/iUdEP2Rw2FQ?si=p-H8DTEHf2jpib8D"
+    ],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/1_IgEueGQQYJ6JFzYOkLTNQAdbnXWcX0x/view?usp=sharing",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-07T14:05:35.038Z"
   }
 ]
