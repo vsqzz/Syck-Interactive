@@ -1496,5 +1496,17 @@
     "status": "pending",
     "expiresAt": "2026-04-07T06:00:57.325Z",
     "createdAt": "2026-04-07T05:30:57.325Z"
+  },
+  {
+    "id": "5qIw2WIVUVO4OLTe7rd8q",
+    "code": "VHZKAH",
+    "productId": "dug-o3zrdq",
+    "productName": "DUG",
+    "buyerDiscordId": "933667483414577153",
+    "buyerUsername": "ПОКОЛЕНИЕ Z",
+    "robuxPrice": 0,
+    "status": "pending",
+    "expiresAt": "2026-04-07T06:24:05.599Z",
+    "createdAt": "2026-04-07T05:54:05.599Z"
   }
 ]
