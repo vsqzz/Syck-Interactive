@@ -670,5 +670,23 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-06T01:39:30.179Z"
+  },
+  {
+    "id": "4-high-quality-vfx-jfdg4t",
+    "name": "4 High Quality VFX",
+    "description": "Just VFX, not scripted but very organized!",
+    "category": "Systems",
+    "fileType": ".rbxm",
+    "features": [],
+    "robuxPrice": 150,
+    "paypalPrice": 1.99,
+    "mainImage": "https://public-files.gumroad.com/2e7yipf0b7z7ul4urzwusnx01z6a",
+    "galleryImages": [],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/19NQb48ygPIfxdyoS2hynaGZboKuwYr8z/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-07T14:02:06.413Z"
   }
 ]
