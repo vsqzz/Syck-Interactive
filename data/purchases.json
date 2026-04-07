@@ -1405,8 +1405,9 @@
     "buyerDiscordId": "710047089991876608",
     "buyerUsername": "Alfi",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-07T02:11:34.863Z",
-    "createdAt": "2026-04-07T01:41:34.863Z"
+    "createdAt": "2026-04-07T01:41:34.863Z",
+    "completedAt": "2026-04-07T01:41:35.361Z"
   }
 ]
