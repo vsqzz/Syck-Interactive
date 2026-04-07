@@ -1505,8 +1505,9 @@
     "buyerDiscordId": "933667483414577153",
     "buyerUsername": "ПОКОЛЕНИЕ Z",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-07T06:24:05.599Z",
-    "createdAt": "2026-04-07T05:54:05.599Z"
+    "createdAt": "2026-04-07T05:54:05.599Z",
+    "completedAt": "2026-04-07T05:54:06.080Z"
   }
 ]
