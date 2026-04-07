@@ -1443,8 +1443,9 @@
     "buyerDiscordId": "892454620851499018",
     "buyerUsername": "ᴬ ᴳᵃᵐᵉʳ〖🎮〛",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-07T06:00:26.000Z",
-    "createdAt": "2026-04-07T05:30:26.000Z"
+    "createdAt": "2026-04-07T05:30:26.000Z",
+    "completedAt": "2026-04-07T05:30:26.532Z"
   }
 ]
