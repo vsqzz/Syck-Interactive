@@ -1544,8 +1544,9 @@
     "buyerDiscordId": "1328814120505577482",
     "buyerUsername": "ParadiseLiam",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-07T16:16:08.694Z",
-    "createdAt": "2026-04-07T15:46:08.694Z"
+    "createdAt": "2026-04-07T15:46:08.694Z",
+    "completedAt": "2026-04-07T15:46:09.402Z"
   }
 ]
