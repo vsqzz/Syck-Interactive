@@ -956,8 +956,9 @@
     "buyerDiscordId": "913445298020429904",
     "productId": "advanced-day-and-night-cycle-fzacws",
     "purchaseId": "FTqf0zBa1ymWRsZ7ZwYE4",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-07T19:53:39.548Z"
+    "createdAt": "2026-04-07T19:53:39.548Z",
+    "lastDownloadAt": "2026-04-07T19:53:45.945Z"
   }
 ]
