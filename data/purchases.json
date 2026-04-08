@@ -1685,8 +1685,9 @@
     "buyerDiscordId": "426647946998710272",
     "buyerUsername": "Nooblet",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-08T08:35:47.558Z",
-    "createdAt": "2026-04-08T08:05:47.558Z"
+    "createdAt": "2026-04-08T08:05:47.558Z",
+    "completedAt": "2026-04-08T08:05:48.154Z"
   }
 ]
