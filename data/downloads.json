@@ -1100,9 +1100,10 @@
     "buyerDiscordId": "713161425761206312",
     "productId": "zone-system-v3-ta9xz8",
     "purchaseId": "i0YWCgl2lyX6gnv8cvP5C",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-08T21:55:56.773Z"
+    "createdAt": "2026-04-08T21:55:56.773Z",
+    "lastDownloadAt": "2026-04-08T21:58:08.951Z"
   },
   {
     "id": "NxXHA3O1lAwDLiM2kiKCe",
