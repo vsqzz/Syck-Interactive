@@ -1015,8 +1015,9 @@
     "buyerDiscordId": "1182224249193250907",
     "productId": "server-locator-hzakaf",
     "purchaseId": "w5cVLPpeOebpwyHHTWGec",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-08T14:20:33.999Z"
+    "createdAt": "2026-04-08T14:20:33.999Z",
+    "lastDownloadAt": "2026-04-08T14:20:42.433Z"
   }
 ]
