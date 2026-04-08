@@ -1609,8 +1609,9 @@
     "buyerDiscordId": "342253610874437644",
     "buyerUsername": "DENIEL",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-08T02:13:28.687Z",
-    "createdAt": "2026-04-08T01:43:28.687Z"
+    "createdAt": "2026-04-08T01:43:28.687Z",
+    "completedAt": "2026-04-08T01:43:29.130Z"
   }
 ]
