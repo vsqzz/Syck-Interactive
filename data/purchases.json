@@ -1827,8 +1827,9 @@
     "buyerDiscordId": "713161425761206312",
     "buyerUsername": "mellonmkay",
     "robuxPrice": 250,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-08T22:25:46.070Z",
-    "createdAt": "2026-04-08T21:55:46.070Z"
+    "createdAt": "2026-04-08T21:55:46.070Z",
+    "completedAt": "2026-04-08T21:55:56.355Z"
   }
 ]
