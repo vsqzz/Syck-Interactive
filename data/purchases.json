@@ -1635,8 +1635,9 @@
     "buyerDiscordId": "1392527657538682880",
     "buyerUsername": "Previewerlik",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-08T03:14:52.546Z",
-    "createdAt": "2026-04-08T02:44:52.546Z"
+    "createdAt": "2026-04-08T02:44:52.546Z",
+    "completedAt": "2026-04-08T02:44:52.998Z"
   }
 ]
