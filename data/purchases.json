@@ -1776,8 +1776,9 @@
     "buyerDiscordId": "542297838156120064",
     "buyerUsername": "Samxie",
     "robuxPrice": 350,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-08T19:40:36.005Z",
-    "createdAt": "2026-04-08T19:10:36.005Z"
+    "createdAt": "2026-04-08T19:10:36.005Z",
+    "completedAt": "2026-04-08T19:14:05.716Z"
   }
 ]
