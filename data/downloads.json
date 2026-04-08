@@ -1090,8 +1090,9 @@
     "buyerDiscordId": "713161425761206312",
     "productId": "r6-movement-system-mqwlyu",
     "purchaseId": "0g5mlee5fVGdQ3ER9dZbe",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-08T21:54:23.945Z"
+    "createdAt": "2026-04-08T21:54:23.945Z",
+    "lastDownloadAt": "2026-04-08T21:54:37.763Z"
   }
 ]
