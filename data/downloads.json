@@ -1070,8 +1070,9 @@
     "buyerDiscordId": "542297838156120064",
     "productId": "loading-screen-v2-fvspgl",
     "purchaseId": "Ee4Uv11q6TJm1s9ZkQZoZ",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-08T19:14:06.178Z"
+    "createdAt": "2026-04-08T19:14:06.178Z",
+    "lastDownloadAt": "2026-04-08T19:14:19.187Z"
   }
 ]
