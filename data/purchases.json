@@ -1724,8 +1724,9 @@
     "buyerDiscordId": "1300572359606009989",
     "buyerUsername": "Secours de Paris",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-08T15:14:12.459Z",
-    "createdAt": "2026-04-08T14:44:12.459Z"
+    "createdAt": "2026-04-08T14:44:12.459Z",
+    "completedAt": "2026-04-08T14:44:13.159Z"
   }
 ]
