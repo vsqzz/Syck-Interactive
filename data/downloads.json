@@ -1000,5 +1000,14 @@
     "maxDownloads": 5,
     "createdAt": "2026-04-08T02:48:45.413Z",
     "lastDownloadAt": "2026-04-08T02:48:48.849Z"
+  },
+  {
+    "id": "xuTxpQ87I3yG8vrrLopm2",
+    "buyerDiscordId": "426647946998710272",
+    "productId": "server-locator-hzakaf",
+    "purchaseId": "xJCpNFRI7NRiM69uHAtVW",
+    "downloadCount": 0,
+    "maxDownloads": 5,
+    "createdAt": "2026-04-08T08:05:48.641Z"
   }
 ]
