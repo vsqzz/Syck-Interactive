@@ -755,5 +755,27 @@
     "creatorName": "♰",
     "active": true,
     "createdAt": "2026-04-07T14:09:39.775Z"
+  },
+  {
+    "id": "free-syck-autoclicker-jnvxxc",
+    "name": "FREE Syck Autoclicker",
+    "description": "Upgraded version of OP Autoclicker (https://www.opautoclicker.com/)\n\nSyck Auto Clicker won't just disappear and hide itself randomly on your PC like how OP clicker does..\n",
+    "category": "Tools",
+    "fileType": "other",
+    "features": [
+      "100% Save",
+      "Made with python"
+    ],
+    "robuxPrice": 0,
+    "mainImage": "https://i.imgur.com/R8yufNt.png",
+    "galleryImages": [
+      "https://youtu.be/occBACfCF2A"
+    ],
+    "tags": [],
+    "downloadUrl": "https://drive.google.com/file/d/1mAaedBoy2W4bf6AgnY64XFmaQaRqBxoW/view?usp=drive_link",
+    "creatorId": "1303458703520825457",
+    "creatorName": "♰",
+    "active": true,
+    "createdAt": "2026-04-08T20:33:57.465Z"
   }
 ]
