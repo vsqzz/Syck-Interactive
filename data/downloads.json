@@ -1200,8 +1200,9 @@
     "buyerDiscordId": "1442167716759994488",
     "productId": "free-syck-autoclicker-jnvxxc",
     "purchaseId": "OjZpVCpFaDY3GO4YZ1i0q",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-09T16:09:35.967Z"
+    "createdAt": "2026-04-09T16:09:35.967Z",
+    "lastDownloadAt": "2026-04-09T16:09:45.586Z"
   }
 ]
