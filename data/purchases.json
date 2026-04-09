@@ -1918,8 +1918,9 @@
     "buyerDiscordId": "987767163060367491",
     "buyerUsername": "Kils",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-09T02:50:47.122Z",
-    "createdAt": "2026-04-09T02:20:47.122Z"
+    "createdAt": "2026-04-09T02:20:47.122Z",
+    "completedAt": "2026-04-09T02:20:47.655Z"
   }
 ]
