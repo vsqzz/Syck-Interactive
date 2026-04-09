@@ -1969,8 +1969,9 @@
     "buyerDiscordId": "1442167716759994488",
     "buyerUsername": "hacker☑️",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-09T16:39:34.582Z",
-    "createdAt": "2026-04-09T16:09:34.583Z"
+    "createdAt": "2026-04-09T16:09:34.583Z",
+    "completedAt": "2026-04-09T16:09:35.429Z"
   }
 ]
