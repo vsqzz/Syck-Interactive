@@ -1892,8 +1892,9 @@
     "buyerDiscordId": "539067469818626070",
     "buyerUsername": "Chi",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-09T02:00:42.509Z",
-    "createdAt": "2026-04-09T01:30:42.509Z"
+    "createdAt": "2026-04-09T01:30:42.509Z",
+    "completedAt": "2026-04-09T01:30:43.005Z"
   }
 ]
