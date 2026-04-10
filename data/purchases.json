@@ -1995,8 +1995,9 @@
     "buyerDiscordId": "1459639949744668673",
     "buyerUsername": "white cat-meme_!!cats!!",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-10T02:26:01.020Z",
-    "createdAt": "2026-04-10T01:56:01.020Z"
+    "createdAt": "2026-04-10T01:56:01.020Z",
+    "completedAt": "2026-04-10T01:56:01.627Z"
   }
 ]
