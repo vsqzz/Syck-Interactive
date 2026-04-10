@@ -2057,8 +2057,9 @@
     "buyerDiscordId": "396755624601321474",
     "buyerUsername": "◌  ̷SillyTavern ◌",
     "robuxPrice": 350,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-10T03:13:29.605Z",
-    "createdAt": "2026-04-10T02:43:29.605Z"
+    "createdAt": "2026-04-10T02:43:29.605Z",
+    "completedAt": "2026-04-10T02:46:13.653Z"
   }
 ]
