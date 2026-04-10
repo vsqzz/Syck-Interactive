@@ -1250,8 +1250,9 @@
     "buyerDiscordId": "1428694624066600990",
     "productId": "push-gamepass-prompt-bwyt7o",
     "purchaseId": "AdF3CQVsqpfWhHIOiCiam",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-10T08:19:32.952Z"
+    "createdAt": "2026-04-10T08:19:32.952Z",
+    "lastDownloadAt": "2026-04-10T08:19:43.606Z"
   }
 ]
