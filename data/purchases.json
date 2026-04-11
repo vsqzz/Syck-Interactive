@@ -2224,8 +2224,9 @@
     "buyerDiscordId": "1443101422991441961",
     "buyerUsername": "slimemaster",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-11T13:45:21.419Z",
-    "createdAt": "2026-04-11T13:15:21.419Z"
+    "createdAt": "2026-04-11T13:15:21.419Z",
+    "completedAt": "2026-04-11T13:15:21.992Z"
   }
 ]
