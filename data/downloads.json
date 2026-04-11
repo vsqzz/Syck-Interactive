@@ -1329,8 +1329,9 @@
     "buyerDiscordId": "1443101422991441961",
     "productId": "dug-o3zrdq",
     "purchaseId": "Z8ZsSyG21zI1urzuRkq32",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-11T13:03:08.661Z"
+    "createdAt": "2026-04-11T13:03:08.661Z",
+    "lastDownloadAt": "2026-04-11T13:03:15.277Z"
   }
 ]
