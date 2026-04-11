@@ -265,9 +265,10 @@
     "buyerDiscordId": "1453051335246348443",
     "productId": "custom-chat-frkblj",
     "purchaseId": "Ve5uC1BJhO5SkcES1iGDr",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-04T05:25:26.859Z"
+    "createdAt": "2026-04-04T05:25:26.859Z",
+    "lastDownloadAt": "2026-04-11T22:48:17.711Z"
   },
   {
     "id": "b07Y1V0lR13qTv8nlbdt9",
