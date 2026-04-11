@@ -2172,8 +2172,9 @@
     "buyerDiscordId": "1487598151497154601",
     "buyerUsername": "Draco444",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-11T05:25:37.378Z",
-    "createdAt": "2026-04-11T04:55:37.378Z"
+    "createdAt": "2026-04-11T04:55:37.378Z",
+    "completedAt": "2026-04-11T04:55:37.909Z"
   }
 ]
