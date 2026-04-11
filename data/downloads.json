@@ -1349,8 +1349,9 @@
     "buyerDiscordId": "1443101422991441961",
     "productId": "anounce-command-em751a",
     "purchaseId": "xLVNa5JPlXeunFDQNn1oP",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-11T13:15:22.540Z"
+    "createdAt": "2026-04-11T13:15:22.540Z",
+    "lastDownloadAt": "2026-04-11T13:15:29.858Z"
   }
 ]
