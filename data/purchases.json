@@ -2468,8 +2468,9 @@
     "buyerDiscordId": "1303424357975982133",
     "buyerUsername": "𝐌𝐢𝐨𝐨𝐗",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-12T15:49:39.625Z",
-    "createdAt": "2026-04-12T15:19:39.625Z"
+    "createdAt": "2026-04-12T15:19:39.625Z",
+    "completedAt": "2026-04-12T15:19:40.090Z"
   }
 ]
