@@ -2430,8 +2430,9 @@
     "buyerDiscordId": "1180296669070381187",
     "buyerUsername": "𝓒𝓱𝓵𝓸𝓮 <3",
     "robuxPrice": 350,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-12T12:21:49.913Z",
-    "createdAt": "2026-04-12T11:51:49.914Z"
+    "createdAt": "2026-04-12T11:51:49.914Z",
+    "completedAt": "2026-04-12T11:55:43.356Z"
   }
 ]
