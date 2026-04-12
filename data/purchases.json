@@ -2304,5 +2304,17 @@
     "status": "pending",
     "expiresAt": "2026-04-12T01:13:37.586Z",
     "createdAt": "2026-04-12T00:43:37.586Z"
+  },
+  {
+    "id": "EjMf1dW8b9igE4a9tjGcH",
+    "code": "M23NFU",
+    "productId": "server-locator-hzakaf",
+    "productName": "Server Locator",
+    "buyerDiscordId": "868183407262306334",
+    "buyerUsername": "Peerless God",
+    "robuxPrice": 0,
+    "status": "pending",
+    "expiresAt": "2026-04-12T01:14:21.417Z",
+    "createdAt": "2026-04-12T00:44:21.417Z"
   }
 ]
