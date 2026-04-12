@@ -1492,8 +1492,9 @@
     "buyerDiscordId": "894389453265715262",
     "productId": "main-menu-system-0j3cly",
     "purchaseId": "z2Z2o8Tx8EBpb5MfSsdXj",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-12T13:14:43.712Z"
+    "createdAt": "2026-04-12T13:14:43.712Z",
+    "lastDownloadAt": "2026-04-12T13:14:55.506Z"
   }
 ]
