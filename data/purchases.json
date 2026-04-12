@@ -2507,8 +2507,9 @@
     "buyerDiscordId": "858449687504486502",
     "buyerUsername": "NightLigth",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-12T16:57:02.196Z",
-    "createdAt": "2026-04-12T16:27:02.196Z"
+    "createdAt": "2026-04-12T16:27:02.196Z",
+    "completedAt": "2026-04-12T16:27:02.779Z"
   }
 ]
