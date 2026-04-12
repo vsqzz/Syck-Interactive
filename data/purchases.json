@@ -2404,8 +2404,9 @@
     "buyerDiscordId": "1392519420601045193",
     "buyerUsername": "𝐊𝐄𝐑𝐀𝐓𝐈𝐍",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-12T04:35:00.108Z",
-    "createdAt": "2026-04-12T04:05:00.108Z"
+    "createdAt": "2026-04-12T04:05:00.108Z",
+    "completedAt": "2026-04-12T04:05:00.696Z"
   }
 ]
