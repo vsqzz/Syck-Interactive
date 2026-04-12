@@ -2443,8 +2443,9 @@
     "buyerDiscordId": "894389453265715262",
     "buyerUsername": "ThomasKanos",
     "robuxPrice": 500,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-12T13:43:43.219Z",
-    "createdAt": "2026-04-12T13:13:43.219Z"
+    "createdAt": "2026-04-12T13:13:43.219Z",
+    "completedAt": "2026-04-12T13:14:43.228Z"
   }
 ]
