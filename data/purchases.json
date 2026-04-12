@@ -2417,8 +2417,9 @@
     "buyerDiscordId": "1453051335246348443",
     "buyerUsername": "Novairplays.",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-12T06:07:48.797Z",
-    "createdAt": "2026-04-12T05:37:48.797Z"
+    "createdAt": "2026-04-12T05:37:48.797Z",
+    "completedAt": "2026-04-12T05:37:49.310Z"
   }
 ]
