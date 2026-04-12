@@ -2313,8 +2313,9 @@
     "buyerDiscordId": "868183407262306334",
     "buyerUsername": "Peerless God",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-12T01:14:21.417Z",
-    "createdAt": "2026-04-12T00:44:21.417Z"
+    "createdAt": "2026-04-12T00:44:21.417Z",
+    "completedAt": "2026-04-12T00:44:21.900Z"
   }
 ]
