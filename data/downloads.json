@@ -1541,9 +1541,10 @@
     "buyerDiscordId": "1454859519728292034",
     "productId": "anounce-command-em751a",
     "purchaseId": "aqQSQ1gZviqXmCXF55t3N",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-13T06:10:48.725Z"
+    "createdAt": "2026-04-13T06:10:48.725Z",
+    "lastDownloadAt": "2026-04-13T06:12:59.460Z"
   },
   {
     "id": "DhA4X2Y8xP57jFB0FBCKu",
