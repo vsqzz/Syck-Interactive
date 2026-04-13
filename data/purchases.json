@@ -2598,8 +2598,9 @@
     "buyerDiscordId": "1444780158002266295",
     "buyerUsername": "ItszXd",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-13T19:04:46.743Z",
-    "createdAt": "2026-04-13T18:34:46.743Z"
+    "createdAt": "2026-04-13T18:34:46.743Z",
+    "completedAt": "2026-04-13T18:34:47.420Z"
   }
 ]
