@@ -2572,8 +2572,9 @@
     "buyerDiscordId": "1430980211561730080",
     "buyerUsername": "Nahidwin",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-13T14:54:52.608Z",
-    "createdAt": "2026-04-13T14:24:52.608Z"
+    "createdAt": "2026-04-13T14:24:52.608Z",
+    "completedAt": "2026-04-13T14:24:53.639Z"
   }
 ]
