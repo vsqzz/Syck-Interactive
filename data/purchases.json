@@ -2559,8 +2559,9 @@
     "buyerDiscordId": "1408077647690334287",
     "buyerUsername": "toihocltv",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-13T14:27:34.096Z",
-    "createdAt": "2026-04-13T13:57:34.096Z"
+    "createdAt": "2026-04-13T13:57:34.096Z",
+    "completedAt": "2026-04-13T13:57:35.069Z"
   }
 ]
