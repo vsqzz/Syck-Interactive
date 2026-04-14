@@ -2635,8 +2635,9 @@
     "buyerDiscordId": "933802394691723324",
     "buyerUsername": "G17",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-14T14:57:44.438Z",
-    "createdAt": "2026-04-14T14:27:44.438Z"
+    "createdAt": "2026-04-14T14:27:44.438Z",
+    "completedAt": "2026-04-14T14:27:45.185Z"
   }
 ]
