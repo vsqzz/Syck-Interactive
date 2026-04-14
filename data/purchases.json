@@ -2672,8 +2672,9 @@
     "buyerDiscordId": "1488256241326358560",
     "buyerUsername": "frogmonk",
     "robuxPrice": 350,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-14T23:07:21.815Z",
-    "createdAt": "2026-04-14T22:37:21.815Z"
+    "createdAt": "2026-04-14T22:37:21.815Z",
+    "completedAt": "2026-04-14T22:37:40.378Z"
   }
 ]
