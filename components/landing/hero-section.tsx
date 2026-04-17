@@ -237,12 +237,12 @@ export function HeroSection() {
       </div>
       
       {/* Stats — 3 metrics static, no auto-scroll */}
-      <div 
-        className={`absolute bottom-12 left-0 right-0 px-6 lg:px-12 transition-all duration-700 delay-500 ${
+      <div
+        className={`absolute bottom-8 sm:bottom-12 left-0 right-0 px-6 lg:px-12 transition-all duration-700 delay-500 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="max-w-[1400px] mx-auto flex items-start gap-10 lg:gap-20">
+        <div className="max-w-[1400px] mx-auto flex items-start gap-6 sm:gap-10 lg:gap-20">
           {[
             {
               value: stats ? (stats.products > 0 ? `${stats.products}` : "0") : "—",
@@ -254,11 +254,11 @@ export function HeroSection() {
             },
             { value: "R$+$", label: "Robux & PayPal accepted" },
           ].map((stat) => (
-            <div key={stat.label} className="flex flex-col gap-2">
-              <span className="text-3xl lg:text-4xl font-display text-white tabular-nums">
+            <div key={stat.label} className="flex flex-col gap-1 sm:gap-2">
+              <span className="text-2xl sm:text-3xl lg:text-4xl font-display text-white tabular-nums">
                 {stat.value}
               </span>
-              <span className="text-xs text-white/50 leading-tight">{stat.label}</span>
+              <span className="text-[10px] sm:text-xs text-white/50 leading-tight">{stat.label}</span>
             </div>
           ))}
         </div>

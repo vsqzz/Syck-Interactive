@@ -53,8 +53,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   return (
     <div className="min-h-screen bg-[oklch(0.06_0.008_260)] noise-overlay">
       <SiteNav />
-      <div className="max-w-6xl mx-auto px-6 pt-28 pb-24 flex gap-8">
-        {/* Sidebar */}
+      <div className="max-w-6xl mx-auto px-6 pt-28 pb-28 md:pb-24 flex gap-8">
+        {/* Sidebar — desktop only */}
         <aside className="w-52 shrink-0 hidden md:block">
           <div className="sticky top-28">
             <p className="font-mono text-[10px] text-muted-foreground uppercase tracking-wider mb-3">
@@ -94,6 +94,32 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           {children}
         </main>
       </div>
+
+      {/* Mobile bottom nav */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[oklch(0.06_0.008_260)] border-t border-[oklch(0.14_0.008_260)] flex">
+        {sidebarLinks.map(link => {
+          const active = link.exact ? pathname === link.href : pathname.startsWith(link.href)
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`flex-1 flex flex-col items-center justify-center gap-1 py-3 text-[10px] font-mono transition-colors ${
+                active ? "text-foreground" : "text-muted-foreground"
+              }`}
+            >
+              <link.icon className="w-5 h-5" />
+              {link.label}
+            </Link>
+          )
+        })}
+        <Link
+          href="/dashboard/products/new"
+          className="flex-1 flex flex-col items-center justify-center gap-1 py-3 text-[10px] font-mono text-[#eca8d6]"
+        >
+          <Plus className="w-5 h-5" />
+          New
+        </Link>
+      </nav>
     </div>
   )
 }

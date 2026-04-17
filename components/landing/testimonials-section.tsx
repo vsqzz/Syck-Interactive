@@ -117,13 +117,13 @@ export function TestimonialsSection() {
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Header */}
-        <div className="flex items-center justify-between mb-20">
+        <div className="flex items-start justify-between mb-12 lg:mb-20 gap-4">
           <div>
             <span className="inline-flex items-center gap-3 text-sm font-mono text-background/40 mb-4">
               <span className="w-12 h-px bg-background/20" />
               {live ? "Live from Discord · #reviews" : "Reviews"}
             </span>
-            <h2 className={`text-4xl lg:text-5xl font-display transition-all duration-1000 ${
+            <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-display transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}>
               Trusted by developers
@@ -131,12 +131,12 @@ export function TestimonialsSection() {
             </h2>
           </div>
 
-          <div className="hidden lg:flex items-center gap-2">
-            <button onClick={goPrev} className="p-4 border border-background/20 hover:bg-background/10 transition-colors">
-              <ArrowLeft className="w-5 h-5" />
+          <div className="flex items-center gap-2 shrink-0">
+            <button onClick={goPrev} className="p-3 lg:p-4 border border-background/20 hover:bg-background/10 transition-colors">
+              <ArrowLeft className="w-4 h-4 lg:w-5 lg:h-5" />
             </button>
-            <button onClick={goNext} className="p-4 border border-background/20 hover:bg-background/10 transition-colors">
-              <ArrowRight className="w-5 h-5" />
+            <button onClick={goNext} className="p-3 lg:p-4 border border-background/20 hover:bg-background/10 transition-colors">
+              <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
             </button>
           </div>
         </div>
@@ -154,7 +154,7 @@ export function TestimonialsSection() {
 
               <blockquote
                 key={active.id}
-                className="text-2xl lg:text-3xl xl:text-4xl font-display leading-[1.3] tracking-tight animate-fadeSlideIn"
+                className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-display leading-[1.3] tracking-tight animate-fadeSlideIn"
               >
                 {active.comment || `Great product — ${active.product}`}
               </blockquote>
@@ -181,14 +181,14 @@ export function TestimonialsSection() {
           {/* Sidebar */}
           <div className="lg:col-span-5 flex flex-col justify-center gap-6">
             {/* Active metric */}
-            <div key={`metric-${activeIndex}`} className="p-10 border border-background/20 bg-background/5 animate-fadeSlideIn">
+            <div key={`metric-${activeIndex}`} className="p-8 lg:p-10 border border-background/20 bg-background/5 animate-fadeSlideIn">
               <div className="flex gap-1 mb-4">
                 <StarRow rating={active.rating} />
               </div>
-              <span className="text-7xl lg:text-8xl font-display block mb-2">
+              <span className="text-5xl sm:text-6xl lg:text-8xl font-display block mb-2">
                 {active.rating}/5
               </span>
-              <span className="text-lg text-background/60">{active.product}</span>
+              <span className="text-base lg:text-lg text-background/60">{active.product}</span>
             </div>
 
             {/* Progress */}
