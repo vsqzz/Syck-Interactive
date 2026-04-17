@@ -46,7 +46,7 @@ export default function StorePage() {
       <SiteNav />
 
       {/* Hero */}
-      <section className="pt-32 pb-12 px-6">
+      <section className="pt-28 pb-6 md:pb-12 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <div
             className="transition-all duration-700"
@@ -71,9 +71,9 @@ export default function StorePage() {
 
       <section className="px-6 pb-24">
         <div className="max-w-6xl mx-auto">
-          {/* Search + filter bar */}
+          {/* Search bar */}
           <div
-            className="flex flex-col md:flex-row gap-4 mb-8 transition-all duration-700 delay-150"
+            className="flex gap-4 mb-4 transition-all duration-700 delay-150"
             style={{
               opacity: visible ? 1 : 0,
               transform: visible ? "translateY(0)" : "translateY(16px)",
@@ -91,8 +91,25 @@ export default function StorePage() {
             </div>
           </div>
 
+          {/* Mobile category filter — outside flex row so it stacks above the grid */}
+          <div className="md:hidden mb-4 flex gap-2 overflow-x-auto pb-2 -mx-6 px-6">
+            {CATEGORIES.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setCategory(cat)}
+                className={`shrink-0 text-xs px-3 py-1.5 rounded-sm font-mono transition-all ${
+                  category === cat
+                    ? "bg-[oklch(0.14_0.008_260)] text-foreground border border-[oklch(0.28_0.008_260)]"
+                    : "bg-[oklch(0.09_0.008_260)] text-muted-foreground border border-[oklch(0.18_0.008_260)]"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
           <div className="flex gap-8">
-            {/* Sidebar categories */}
+            {/* Sidebar categories — desktop only */}
             <aside
               className="hidden md:block w-48 shrink-0 transition-all duration-700 delay-200"
               style={{
@@ -120,25 +137,8 @@ export default function StorePage() {
               </div>
             </aside>
 
-            {/* Mobile category filter */}
-            <div className="md:hidden mb-4 flex gap-2 overflow-x-auto pb-1">
-              {CATEGORIES.map(cat => (
-                <button
-                  key={cat}
-                  onClick={() => setCategory(cat)}
-                  className={`shrink-0 text-xs px-3 py-1.5 rounded-sm font-mono transition-all ${
-                    category === cat
-                      ? "bg-[oklch(0.14_0.008_260)] text-foreground border border-[oklch(0.28_0.008_260)]"
-                      : "bg-[oklch(0.09_0.008_260)] text-muted-foreground border border-[oklch(0.18_0.008_260)]"
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-
             {/* Products grid */}
-            <div className="flex-1">
+            <div className="flex-1 min-w-0">
               {loading ? (
                 <div className="flex items-center justify-center py-24">
                   <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" />
