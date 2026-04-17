@@ -2825,8 +2825,9 @@
     "buyerDiscordId": "1147072918535278622",
     "buyerUsername": "PITIK      NI SIR BACON",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-17T14:35:08.376Z",
-    "createdAt": "2026-04-17T14:05:08.376Z"
+    "createdAt": "2026-04-17T14:05:08.376Z",
+    "completedAt": "2026-04-17T14:05:09.622Z"
   }
 ]
