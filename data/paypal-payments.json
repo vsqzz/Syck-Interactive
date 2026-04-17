@@ -58,7 +58,8 @@
     "sellerId": "1303458703520825457",
     "paypalPrice": 8.99,
     "transactionId": "1AB1233432bBb",
-    "status": "pending",
-    "createdAt": "2026-04-12T13:54:00.014Z"
+    "status": "rejected",
+    "createdAt": "2026-04-12T13:54:00.014Z",
+    "note": "Fake/False Transaction ID."
   }
 ]
