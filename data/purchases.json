@@ -2734,8 +2734,9 @@
     "buyerDiscordId": "1454859519728292034",
     "buyerUsername": "Tensei",
     "robuxPrice": 350,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-17T06:03:29.575Z",
-    "createdAt": "2026-04-17T05:33:29.575Z"
+    "createdAt": "2026-04-17T05:33:29.575Z",
+    "completedAt": "2026-04-17T05:34:50.890Z"
   }
 ]
