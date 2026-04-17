@@ -2889,8 +2889,9 @@
     "buyerDiscordId": "1458662964793184402",
     "buyerUsername": "kai",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-18T00:21:45.919Z",
-    "createdAt": "2026-04-17T23:51:45.919Z"
+    "createdAt": "2026-04-17T23:51:45.919Z",
+    "completedAt": "2026-04-17T23:51:46.395Z"
   }
 ]
