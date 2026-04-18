@@ -3121,8 +3121,9 @@
     "buyerDiscordId": "1383113368579211335",
     "buyerUsername": "inactive",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-18T21:52:30.242Z",
-    "createdAt": "2026-04-18T21:22:30.242Z"
+    "createdAt": "2026-04-18T21:22:30.242Z",
+    "completedAt": "2026-04-18T21:22:30.733Z"
   }
 ]
