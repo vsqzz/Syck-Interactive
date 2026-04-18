@@ -3108,8 +3108,9 @@
     "buyerDiscordId": "1401156083728388208",
     "buyerUsername": "Diivine",
     "robuxPrice": 350,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-18T21:31:24.031Z",
-    "createdAt": "2026-04-18T21:01:24.031Z"
+    "createdAt": "2026-04-18T21:01:24.031Z",
+    "completedAt": "2026-04-18T21:02:15.863Z"
   }
 ]
