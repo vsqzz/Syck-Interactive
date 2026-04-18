@@ -3018,8 +3018,9 @@
     "buyerDiscordId": "1457798475533123716",
     "buyerUsername": "kiyan",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-18T16:56:35.284Z",
-    "createdAt": "2026-04-18T16:26:35.284Z"
+    "createdAt": "2026-04-18T16:26:35.284Z",
+    "completedAt": "2026-04-18T16:26:35.819Z"
   }
 ]
