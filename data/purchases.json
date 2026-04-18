@@ -3031,8 +3031,9 @@
     "buyerDiscordId": "1269019395728871541",
     "buyerUsername": "Rama",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-18T17:15:26.689Z",
-    "createdAt": "2026-04-18T16:45:26.689Z"
+    "createdAt": "2026-04-18T16:45:26.689Z",
+    "completedAt": "2026-04-18T16:45:27.217Z"
   }
 ]
