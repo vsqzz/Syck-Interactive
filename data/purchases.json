@@ -2928,8 +2928,9 @@
     "buyerDiscordId": "1490442635842687017",
     "buyerUsername": "MouseMan",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-18T03:51:36.511Z",
-    "createdAt": "2026-04-18T03:21:36.511Z"
+    "createdAt": "2026-04-18T03:21:36.511Z",
+    "completedAt": "2026-04-18T03:21:36.971Z"
   }
 ]
