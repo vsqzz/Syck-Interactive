@@ -3057,8 +3057,9 @@
     "buyerDiscordId": "1474710970294206581",
     "buyerUsername": "Densss",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-18T19:04:27.779Z",
-    "createdAt": "2026-04-18T18:34:27.779Z"
+    "createdAt": "2026-04-18T18:34:27.779Z",
+    "completedAt": "2026-04-18T18:34:28.338Z"
   }
 ]
