@@ -3005,8 +3005,9 @@
     "buyerDiscordId": "1474349852405268553",
     "buyerUsername": "LilPete",
     "robuxPrice": 500,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-18T16:11:07.890Z",
-    "createdAt": "2026-04-18T15:41:07.890Z"
+    "createdAt": "2026-04-18T15:41:07.890Z",
+    "completedAt": "2026-04-18T15:43:13.064Z"
   }
 ]
