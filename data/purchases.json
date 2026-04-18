@@ -2915,8 +2915,9 @@
     "buyerDiscordId": "1488963641633144947",
     "buyerUsername": "xbot",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-18T03:13:53.356Z",
-    "createdAt": "2026-04-18T02:43:53.356Z"
+    "createdAt": "2026-04-18T02:43:53.356Z",
+    "completedAt": "2026-04-18T02:43:54.236Z"
   }
 ]
