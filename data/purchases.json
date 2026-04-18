@@ -3044,8 +3044,9 @@
     "buyerDiscordId": "1061704767249846354",
     "buyerUsername": "lunar",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-18T18:21:27.701Z",
-    "createdAt": "2026-04-18T17:51:27.701Z"
+    "createdAt": "2026-04-18T17:51:27.701Z",
+    "completedAt": "2026-04-18T17:51:28.182Z"
   }
 ]
