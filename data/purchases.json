@@ -3172,8 +3172,9 @@
     "buyerDiscordId": "1294624973700464754",
     "buyerUsername": "Ayato",
     "robuxPrice": 0,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-19T06:39:34.552Z",
-    "createdAt": "2026-04-19T06:09:34.552Z"
+    "createdAt": "2026-04-19T06:09:34.552Z",
+    "completedAt": "2026-04-19T06:09:35.100Z"
   }
 ]
