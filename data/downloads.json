@@ -1942,8 +1942,9 @@
     "buyerDiscordId": "1256564118165524554",
     "productId": "flight-system-m2gisl",
     "purchaseId": "TKNVFSUZOi78axGDQduEz",
-    "downloadCount": 0,
+    "downloadCount": 1,
     "maxDownloads": 5,
-    "createdAt": "2026-04-19T15:07:46.101Z"
+    "createdAt": "2026-04-19T15:07:46.101Z",
+    "lastDownloadAt": "2026-04-19T15:07:56.072Z"
   }
 ]
