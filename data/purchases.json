@@ -3185,8 +3185,9 @@
     "buyerDiscordId": "1256564118165524554",
     "buyerUsername": "SimplyMixtyYT",
     "robuxPrice": 250,
-    "status": "pending",
+    "status": "completed",
     "expiresAt": "2026-04-19T15:37:12.791Z",
-    "createdAt": "2026-04-19T15:07:12.791Z"
+    "createdAt": "2026-04-19T15:07:12.791Z",
+    "completedAt": "2026-04-19T15:07:45.644Z"
   }
 ]
